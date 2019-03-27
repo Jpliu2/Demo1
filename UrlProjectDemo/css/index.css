@@ -1,0 +1,249 @@
+* {
+    background-color: #F4F5F7;
+    padding: 0;
+    margin: 0;
+}
+
+div,img,span,label {
+    background-color: transparent;
+}
+
+.wrap {
+    width: 100%;
+}
+
+#share_leftImage {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 120px;
+    height: 120px;
+}
+
+#share_rightImage {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 118px;
+    height: 39px;
+}
+
+#share_leftIcon {
+    position: absolute;
+    z-index: 99;
+    left: 17px;
+    top: 11px;
+    width: 42px;
+    height: 48px;
+}
+
+#share_rightIcon {
+    position: absolute;
+    z-index: 99;
+    right: 0px;
+    top: 0px;
+    width: 54px;
+    height: 75px;
+}
+
+/*作业内容*/
+#backview {
+    position: absolute;
+    background-color: transparent;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+}
+#share_hworkInfo {
+    border-radius: 5px;
+    background-color: white;
+    margin-left: 18px;
+    margin-top: 18px;
+    margin-right: 18px;
+    margin-bottom: 10px;
+}
+
+#hworkInfo_hwTitle_div {
+    padding-top: 33px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 18px;
+}
+
+#hworkInfo_hwTitle {
+    display:block;
+    text-align:center;
+}
+
+/*下划线*/
+.hworkInfo_hr_div {
+    clear: both;
+    background-color: #DEE1E5;
+    height: 1px;
+    margin-left: 18px;
+    margin-right: 18px;
+}
+
+/*作业信息*/
+#hworkInfo_detail {
+    margin-top: 20px;
+}
+
+/*作业具体信息*/
+.hworkInfo_topDetail {
+    clear: both;
+    margin-bottom: 20px;
+    margin-left: 27px;
+    margin-right: 27px;
+}
+
+.hworkInfo_topDetail .hworkInfo_topDetail_left {
+    display: block;
+    float: left;
+    width: 40%;
+    text-align: left;
+    color: #57595D;
+    font-size: 14px;
+    font-family: PingFangSC-Regular, sans-serif;
+}
+
+.hworkInfo_topDetail .hworkInfo_topDetail_right {
+    display: block;
+    float: right;
+    width: 48%;
+    margin-bottom: 20px;
+    text-align: right;
+    color: #57595D;
+    font-size: 14px;
+    font-family: PingFangSC-Medium, sans-serif;
+}
+
+/*底部提示语*/
+#hworkInfo_TipMsg_div {
+    clear: both;
+    border-top: dashed #DEE1E5 1px;
+    margin-left: 18px;
+    margin-right: 25px;
+    padding-bottom: 20px;
+}
+
+#hworkInfo_TipMsg {
+    display: block;
+    margin-top: 20px;
+    font-family: PingFangSC-Regular, sans-serif;
+    font-size: 13px;
+    color: #05C1AE;
+}
+
+/*缺省图片*/
+#hworkInfo_default {
+    height: 250px;
+    text-align: center;
+}
+
+#share_default_image {
+    margin-top: 32px;
+    width: 150px;
+    height: 125px;
+}
+
+#hworkInfo_default label{
+    font-size: 14px;
+    color: #A5A9AF;
+    font-family: NotoSansHans-Regular,sans-serif;
+}
+
+/*分割线*/
+#share_center_div {
+    height: 0px;
+}
+
+#share_center_leftImage {
+    position: relative;
+    width: 12px;
+    height: 39px;
+    z-index: 99;
+    top: -25px;
+    left: 30%;
+}
+
+#share_center_rightImage {
+    position: relative;
+    width: 12px;
+    height: 39px;
+    z-index: 99;
+    top: -25px;
+    left: 70%;
+}
+/*提示步骤*/
+#share_step {
+    border-radius: 5px;
+    background-color: white;
+    margin-left: 18px;
+    margin-right: 18px;
+    padding-bottom: 20px;
+    font-family: PingFangSC-Regular, sans-serif;
+    font-size: 13px;
+    color: #57595D;
+}
+
+#step_span_title {
+    display: block;
+    padding-top: 26px;
+    margin-left: 18px;
+    margin-bottom: 15px;
+}
+
+.step_div_tip {
+    border: dashed #DEE1E7 1px;
+    margin-left: 18px;
+    margin-right: 18px;
+    margin-bottom: 10px;
+}
+
+.step_span_tip {
+    display: block;
+    margin-top: 11px;
+    margin-bottom: 11px;
+    margin-left: 16px;
+}
+
+#share_tipBackview {
+    background-color: transparent;
+    height: 64px;
+}
+
+/*底部按钮*/
+#share_bottom {
+    background-color: white;
+    position: fixed;
+    bottom: 0px;
+    height: 54px;
+    width: 100%;
+    font-size: 15px;
+    font-family: PingFangSC-Regular, sans-serif;
+}
+
+#bottom_span {
+    background-color: white;
+    position: absolute;
+    padding-left: 31px;
+    height: 14px;
+    top: 20px;
+    line-height: 14px;
+    color: #262729;
+}
+
+#bottom_btn {
+    background-color: #05C1AE;
+    border-radius: 5px;
+    display: none;
+    outline:none;
+    color: white;
+    position: absolute;
+    right: 31px;
+    top: 8px;
+    width: 108px;
+    height: 38px;
+}
