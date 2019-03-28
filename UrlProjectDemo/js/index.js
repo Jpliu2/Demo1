@@ -16,8 +16,10 @@ var app = new Vue({
 
     mounted: function() {
         this.switchContext()
-        var isFromWechat = this.checkWechat()
-        console.log(isFromWechat)
+        var ua = navigator.userAgent.toLowerCase()
+        alert(ua)
+        // var isFromWechat = this.checkWechat()
+        // console.log(isFromWechat)
         var that = this //保存this指向vue
         $.ajax({
             type: 'POST',
@@ -109,17 +111,17 @@ var app = new Vue({
             }
         },
 
-        //判断h5从哪里进入
-        checkWechat: function () {
-            var ua = navigator.userAgent.toLowerCase()
-            if(ua.match(/MicroMessenger/i)=="micromessenger") {
-                console.log('微信')
-                return "weixin"
-            } else if (ua.match(/QQ/i) == "qq") {
-                console.log('腾讯QQ')
-                return "QQ"
-            }
-            return false
-        }
+        // //判断h5从哪里进入
+        // checkWechat: function () {
+        //     var ua = navigator.userAgent.toLowerCase()
+        //     if(ua.match(/MicroMessenger/i)=="micromessenger") {
+        //         console.log('微信')
+        //         return "weixin"
+        //     } else if (ua.match(/QQ/i) == "qq") {
+        //         console.log('腾讯QQ')
+        //         return "QQ"
+        //     }
+        //     return false
+        // }
     }
 })
