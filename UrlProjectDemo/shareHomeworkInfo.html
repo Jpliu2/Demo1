@@ -107,5 +107,9 @@
 </div>
 <script src="js/vue.js"></script>
 <script src="js/index.js"></script>
+<script>
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        WeixinJSBridge.call('hideToolbar');});
+</script>
 </body>
 </html>

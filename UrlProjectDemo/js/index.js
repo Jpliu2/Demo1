@@ -111,11 +111,13 @@ var app = new Vue({
         //判断h5是否从微信进入
         checkWechat: function () {
             var ua = navigator.userAgent.toLowerCase()
+            $('body').css('overflow','hidden')
+            $('html').css('overflow','hidden')
             if(ua.match(/MicroMessenger/i) == "micromessenger") {
-                location.replace(`https://open.weixin.qq.com/connect/oauth2/authorize?appid=${this.wxAppId}&redirect_uri=${window.location.href}&response_type=code&scope=snsapi_base&state=123&connect_redirect=1#wechat_redirect`);
                 $('#coverBackview').css('display','block')
-                $('body').css('overflow','hidden')
-                $('html').css('overflow','hidden')
+            } else {
+                $('body').css('overflow','scroll')
+                $('html').css('overflow','scroll')
             }
         }
     }
