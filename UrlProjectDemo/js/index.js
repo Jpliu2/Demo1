@@ -111,13 +111,13 @@ var app = new Vue({
         //判断h5是否从微信进入
         checkWechat: function () {
             var ua = navigator.userAgent.toLowerCase()
-            $('body').css('overflow','hidden')
-            $('html').css('overflow','hidden')
+            // $('body').css('overflow','hidden')
+            // $('html').css('overflow','hidden')
             if(ua.match(/MicroMessenger/i) == "micromessenger") {
                 $('#coverBackview').css('display','block')
             } else {
-                $('body').css('overflow','scroll')
-                $('html').css('overflow','scroll')
+                // $('body').css('overflow','scroll')
+                // $('html').css('overflow','scroll')
             }
         }
     }
