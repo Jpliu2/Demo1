@@ -113,7 +113,10 @@ var app = new Vue({
             var ua = navigator.userAgent.toLowerCase()
             if(ua.match(/MicroMessenger/i) == "micromessenger") {
                 $('#coverBackview').css('display','block')
-            } 
+            } else {
+                $('html').css('overflow','scroll')
+                $('body').css('overflow','scroll')
+            }
         }
     }
 })
