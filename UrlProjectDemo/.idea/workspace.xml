@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0eb5985-cbdd-4a6a-81bc-250bbc42cae5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shareHomeworkInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/shareHomeworkInfo.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -19,7 +18,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/shareHomeworkInfo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="596">
+            <state relative-caret-position="615">
               <caret line="116" column="5" lean-forward="true" selection-start-line="116" selection-start-column="5" selection-end-line="116" selection-end-column="5" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -191,12 +190,12 @@
       <workItem from="1553646453552" duration="23365000" />
       <workItem from="1553734113833" duration="12115000" />
       <workItem from="1553754782448" duration="2088000" />
-      <workItem from="1553762320005" duration="1142000" />
+      <workItem from="1553762320005" duration="1283000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45038000" />
+    <option name="totallyTimeSpent" value="45179000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="370" y="34" width="1410" height="877" extended-state="0" />
@@ -291,7 +290,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/shareHomeworkInfo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="596">
+        <state relative-caret-position="615">
           <caret line="116" column="5" lean-forward="true" selection-start-line="116" selection-start-column="5" selection-end-line="116" selection-end-column="5" />
           <folding>
             <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
