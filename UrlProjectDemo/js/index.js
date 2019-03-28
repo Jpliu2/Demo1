@@ -117,15 +117,7 @@ var app = new Vue({
                 // document.body.addEventListener('touchmove', function (e) {
                 //   e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
                 // }, {passive: false});
-                alert('微信')
                 $('#coverBackview').css('display','block')
-            } else {
-                alert('其它')
-                // document.body.addEventListener('touchmove', function (e) {
-                //   e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
-                // }, {passive: true});
-                // $('html').css('overflow','scroll')
-                // $('body').css('overflow','scroll')
             }
         }
     }
