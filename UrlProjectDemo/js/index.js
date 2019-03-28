@@ -110,11 +110,10 @@ var app = new Vue({
 
         //判断h5是否从微信进入
         checkWechat: function () {
-            // $('html').css('overflow','hidden')
-            // $('body').css('overflow','hidden')
             var ua = navigator.userAgent.toLowerCase()
-            alert(ua)
             if(ua.match(/MicroMessenger/i) == "micromessenger") {
+                $('html').css('overflow','hidden')
+                $('body').css('overflow','hidden')
                 $('#coverBackview').css('display','block')
                 alert('微信')
             } else {
