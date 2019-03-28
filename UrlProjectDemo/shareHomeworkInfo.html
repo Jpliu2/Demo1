@@ -30,7 +30,7 @@
     <img id="share_rightIcon" src="./image/share_rightIcon@2x.png" alt=""/>
     <!--作业内容-->
     <div id="backview">
-        <div id="share_hworkInfo">
+        <div id="share_hworkInfo" v-if="isRequestSuccess">
             <div id="hworkInfo_hwTitle_div">
                 <span id="hworkInfo_hwTitle">{{ hwTitle }}</span>
             </div>
@@ -61,8 +61,14 @@
             <div id="hworkInfo_default" v-if="isRepeal">
                 <img id="share_default_image" src="./image/share_default_image@2x.png" alt=""/>
                 <br>
-                <label>练习已经被老师撤销了～</label>
+                <label class="share_default_label">练习已经被老师撤销了～</label>
             </div>
+        </div>
+        <!--缺省图片-->
+        <div id="share_networkError" v-if="!isRequestSuccess">
+            <img id="share_error_image" :src="tipImageSrc" alt=""/>
+            <br>
+            <label class="share_default_label">{{ tipText }}</label>
         </div>
         <div id="share_center_div">
             <img id="share_center_leftImage" src="./image/share_center_iconImg@2x.png" alt=""/>
@@ -88,7 +94,31 @@
         </div>
     </div>
 </div>
+<!--蒙层-->
+<div id="coverBackview" v-cloak>
+    <img id="cover_tipImage" src="./image/cover_tipImage@2x.png" alt=""/>
+    <span>
+        请点击右上角 【...】
+        <br>
+        安卓：选择【在浏览器中打开】
+        <br>
+        iPhone：选择【在safari浏览器中打开】
+    </span>
+</div>
 <script src="js/vue.js"></script>
 <script src="js/index.js"></script>
+<!--<script>-->
+<!--$(function(){-->
+    <!--//隐藏蒙层view-->
+    <!--// $('#coverBackview').hide();-->
+    <!--$('body').css('overflow','hidden');-->
+    <!--$('html').css('overflow','hidden');-->
+    <!--$("#coverBackview").click(function(){-->
+        <!--$('#coverBackview').hide();-->
+        <!--$('body').css('overflow','scroll');-->
+        <!--$('html').css('overflow','scroll');-->
+    <!--});-->
+<!--});-->
+<!--</script>-->
 </body>
 </html>

@@ -2,83 +2,65 @@ var app = new Vue({
     el: '#app',
     data: {
         // 真实数据
-        hwTitle: '2月22日数学练习的解放军队返回收购的书柜的佛UI更好的佛 iu 个好地方 iu9苏佛山东方很对', //作业标题
-        hwTypeName:'打卡练习',//作业类型
-        hwType: 3, //作业类型
-        hwStartTime: '2018-3-24  9：00',//开始时间
-        hwEndTime: '2018-3-24  9：00', //结束时间
-        isRepeal: false, //作业是否撤销
+        hwTitle: '', //作业标题
+        hwTypeName:'',//作业类型
+        hwType: null, //作业类型
+        hwStartTime: '',//开始时间
+        hwEndTime: '', //结束时间
+        isRepeal: null, //作业是否撤销
+        isTestApi: null,//网络请求
+        isRequestSuccess:null,//网络请求是否成功
+        tipText: '',//缺省文字
+        tipImageSrc: ''//缺省图片
     },
 
     mounted: function() {
         this.switchContext()
-        document.title = this.hwTitle;
-        //时间格式化: 分′秒″
-        function formatTime(time) {
-            // 取整，小数点后一位
-            time = Math.floor(time * 10) / 10
-            if (time < 0 || !time) {
-                return ['-1', '']
-            } else {
-                var second = time % 60
-                var minutes = parseInt(time / 60)
-
-                //小于一分钟时，只展示秒数
-                if (minutes == 0) {
-                    return { second: second }
+        var isFromWechat = this.checkWechat()
+        console.log(isFromWechat)
+        var that = this //保存this指向vue
+        $.ajax({
+            type: 'POST',
+            url:
+                // (this.isTestApi ? '//mhwtest.zhixue.com' : '//mehwapi.changyan.com') +
+                // timestamp(
+                //     '/homework_middle_customer_service/homeworkReportService/getShareHomeworkInfo'
+                // ),
+            // 测试url
+            'http://172.31.223.17:30338/homework_middle_customer_service/homeworkReportService/getShareHomeworkInfo',
+            data:
+                'hwId=' + this.getQueryObject().hwId,
+            success: function(data) {
+                //判断数据时候获取异常
+                if (data.code == 200) {
+                    that.isRequestSuccess = true
+                    var _data = data.result
+                    console.log(data)
+                    document.title = _data.hwTitle
+                    that.hwTitle = _data.hwTitle
+                    that.hwTypeName = _data.hwTypeName
+                    that.hwType = _data.hwType
+                    that.hwStartTime = that.format(_data.hwStartTime)
+                    that.hwEndTime = that.format(_data.hwEndTime)
+                    that.isRepeal = _data.isRepeal
                 } else {
-                    return { minutes: minutes, second: second }
+                    that.isRequestSuccess = false
+                    console.log(data)
+                    document.title = '数据异常'
+                    that.tipText = '加载失败，请稍后重试～'
+                    that.tipImageSrc = './image/share_noData_error@2x.png'
                 }
+            },
+            error: function(err) {
+                //判断是否没有网络
+                this.isRequestSuccess = false
+                document.title = "网络异常"
+                that.tipText = '无法连接至网络哦～'
+                that.tipImageSrc = './image/share_network_error@2x.png'
             }
-        }
-        // var that = this //保存this指向vue
-        // $.ajax({
-        //     type: 'POST',
-        //     url:
-        //         (this.isTestApi ? '//mhwtest.zhixue.com' : '//mehwapi.changyan.com') +
-        //         timestamp(
-        //             '/homework_middle_customer_service/homeworkReportService/getClassReport'
-        //         ),
-        //     // 测试url
-        //     //'http://172.31.223.11:30338/homework_middle_customer_service/homeworkReportService/getTeaSyncPracticeReport',
-        //     data:
-        //         'hwId=' +
-        //         (this.getQueryObject().hwId || 'af0bfa58-b603-4430-af6d-304fc0eebca4') +
-        //         '&classId=' +
-        //         (this.getQueryObject().classId || '1500000200030541987'),
-        //
-        //     success: function(data) {
-        //         console.log(data)
-        //         var _data = data.result
-        //         //班级平均分
-        //         that.avgScore = solveNum(_data.avgScore)
-        //         //满分
-        //         that.fullScore = _data.fullScore
-        //         //最高分
-        //         that.maxScore = solveNum(_data.maxScore)
-        //         //最低分
-        //         that.minScore = solveNum(_data.minScore)
-        //         //平均用时
-        //         that.avgTime = formatTime(_data.avgTime)
-        //         that.fullCount = _data.fullCount //优秀
-        //         that.goodCount = _data.goodCount //良好
-        //         that.passCount = _data.passCount //达标
-        //         that.unPassCount = _data.unPassCount //不达标
-        //         that.hwTitle = _data.hwTitle
-        //         that.startTime = that.format(_data.startTime)
-        //         that.endTime = that.format(_data.endTime)
-        //         that.unSubmitedCount = _data.unSubmitedCount //未提交
-        //         that.unCorrectedCount = _data.unCorrectedCount || 0 //未批改
-        //         that.studentCount = _data.studentCount //作业总数
-        //         that.reviseInfo = _data.reviseInfo //   {订正数/订正总数}
-        //     },
-        //     error: function(err) {
-        //         console.log(err)
-        //     }
-        // }).then(function(res) {
-        //     console.log(res)
-        //     that.drawLine()
-        // })
+        }).then(function(res) {
+            //其它情况
+        })
     },
     methods: {
         // 从url上截取参数对象
@@ -116,6 +98,7 @@ var app = new Vue({
                 )
             }
         },
+
         // 根据url切换测试、现网环境
         switchContext: function() {
             var url = window.location.href
@@ -124,6 +107,19 @@ var app = new Vue({
             if (flag) {
                 this.isTestApi = true
             }
+        },
+
+        //判断h5从哪里进入
+        checkWechat: function () {
+            var ua = navigator.userAgent.toLowerCase()
+            if(ua.match(/MicroMessenger/i)=="micromessenger") {
+                console.log('微信')
+                return "weixin"
+            } else if (ua.match(/QQ/i) == "qq") {
+                console.log('腾讯QQ')
+                return "QQ"
+            }
+            return false
         }
     }
 })
