@@ -5,7 +5,7 @@
 }
 
 .index_body {
-    overflow: hidden;/*为了兼容普通PC的浏览器*/
+    overflow-y: hidden;/*为了兼容普通PC的浏览器*/
 }
 
 div,img,span,label {
