@@ -16,7 +16,6 @@ var app = new Vue({
 
     mounted: function() {
         this.switchContext()
-        this.checkWechat()
         var that = this //保存this指向vue
         $.ajax({
             type: 'POST',
@@ -105,16 +104,6 @@ var app = new Vue({
             var flag = a.indexOf('mhwtest.zhixue.com') != -1
             if (flag) {
                 this.isTestApi = true
-            }
-        },
-
-        //判断h5是否从微信进入
-        checkWechat: function () {
-            // $('html').css('overflow','hidden')
-            // $('body').css('overflow','hidden')
-            var ua = navigator.userAgent.toLowerCase()
-            if(ua.match(/MicroMessenger/i) == "micromessenger") {
-                $('#coverBackview').css('display','block')
             }
         }
     }
