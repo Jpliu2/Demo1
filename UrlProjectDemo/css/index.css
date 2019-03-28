@@ -6,6 +6,7 @@
 
 .index_body {
     overflow-y: hidden;/*为了兼容普通PC的浏览器*/
+    height: 100%;
 }
 
 div,img,span,label {
