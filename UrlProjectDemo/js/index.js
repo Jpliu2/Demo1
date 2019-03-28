@@ -112,7 +112,6 @@ var app = new Vue({
         checkWechat: function () {
             var ua = navigator.userAgent.toLowerCase()
             if(ua.match(/MicroMessenger/i) == "micromessenger") {
-                // alert('微信')
                 $('#coverBackview').css('display','block')
             } 
         }
