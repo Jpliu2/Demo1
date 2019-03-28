@@ -115,14 +115,11 @@ var app = new Vue({
             var ua = navigator.userAgent.toLowerCase()
             if(ua.match(/MicroMessenger/i) == "micromessenger") {
                 $('#coverBackview').css('display','block')
-                document.body.addEventListener('touchmove', function (e) {
-                  e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
-                }, {passive: false});
                 alert('微信')
             } else {
                 alert('其它')
-                $('html').css('overflow','scroll')
-                $('body').css('overflow','scroll')
+                // $('html').css('overflow','scroll')
+                // $('body').css('overflow','scroll')
             }
         }
     }
