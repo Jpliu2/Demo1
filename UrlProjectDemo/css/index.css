@@ -4,10 +4,6 @@
     margin: 0;
 }
 
-html,body {
-    /*overflow: hidden;*/
-}
-
 div,img,span,label {
     background-color: transparent;
 }
