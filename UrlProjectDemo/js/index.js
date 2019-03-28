@@ -117,9 +117,7 @@ var app = new Vue({
                     e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
                 }, {passive: false});
                 $('#coverBackview').css('display','block')
-            }  else {
-                // alert('浏览器')
-            }
+            } 
         }
     }
 })
