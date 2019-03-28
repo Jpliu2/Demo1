@@ -8,10 +8,6 @@ div,img,span,label {
     background-color: transparent;
 }
 
-html,body {
-    overflow: hidden;
-}
-
 .wrap {
     width: 100%;
 }
