@@ -110,10 +110,10 @@
 <script type="text/javascript">
     //判断h5是否从微信进入
     if(window.navigator.userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger'){
+        $('body').addClass('index_body');
         $('#coverBackview').css('display','block');
-        document.body.addEventListener('touchmove', function (e) {
-            e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
-        }, {passive: false});
+    } else {
+        $('body').removeClass('index_body');
     }
 </script>
 </body>
