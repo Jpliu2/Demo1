@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0eb5985-cbdd-4a6a-81bc-250bbc42cae5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shareHomeworkInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/shareHomeworkInfo.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -84,8 +84,8 @@
         <option value="$PROJECT_DIR$/test.html" />
         <option value="$PROJECT_DIR$/css/test.css" />
         <option value="$PROJECT_DIR$/js/index.js" />
-        <option value="$PROJECT_DIR$/shareHomeworkInfo.html" />
         <option value="$PROJECT_DIR$/css/index.css" />
+        <option value="$PROJECT_DIR$/shareHomeworkInfo.html" />
       </list>
     </option>
   </component>
@@ -190,12 +190,12 @@
       <workItem from="1553646453552" duration="23365000" />
       <workItem from="1553734113833" duration="12115000" />
       <workItem from="1553754782448" duration="2088000" />
-      <workItem from="1553762320005" duration="1825000" />
+      <workItem from="1553762320005" duration="1948000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45721000" />
+    <option name="totallyTimeSpent" value="45844000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="94" y="159" width="1410" height="877" extended-state="0" />
