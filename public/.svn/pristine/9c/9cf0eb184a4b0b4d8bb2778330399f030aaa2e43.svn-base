@@ -1,0 +1,327 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background: #fff;
+  font-family: PingFangSC-Medium, sans-serif;
+}
+
+.wrap {
+  width: 100%;
+  /* height: 100%; */
+  background: #f0f6fb;
+}
+
+/* 头部start */
+
+.head {
+  width: 100%;
+  height: 1.98rem;
+  background-color: #fff;
+}
+
+.head-wrap {
+  width: 89%;
+  height: 1.98rem;
+  margin: 0 auto;
+  color: white;
+  background-image: url('../image/bg-head.png');
+  background-size: 100% 100%;
+}
+
+.head .report-type {
+  font-weight: bold;
+  font-size: 0.45rem;
+  line-height: 0.6rem;
+  padding: 0.4rem 0.45rem 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.head .date-range {
+  font-size: 0.3rem;
+  line-height: 0.5rem;
+  padding: 0.18rem 0 0 0.45rem;
+  opacity: 0.8;
+}
+
+/* 头部end */
+
+.content {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* 总览栏start */
+
+.summary {
+  width: 100%;
+  height: 5.1rem;
+  background-color: white;
+  /* border: 1px solid red; */
+}
+
+.title {
+  margin-left: 0.45rem;
+  padding-top: 0.35rem;
+  padding-bottom: 0.1rem;
+  line-height: 0.6rem;
+  font-size: 0.4rem;
+  color: #262729;
+  font-weight: 500;
+}
+
+.total-score {
+  width: 100%;
+  height: 5rem;
+  margin: 0.3rem 0;
+  background-color: white;
+}
+
+.description {
+  width: 94%;
+  margin: auto;
+  height: 3rem;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  padding: 8px 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+/* 班级指数 */
+
+.des-block {
+  float: left;
+  width: 2.2rem;
+  height: 2.37rem;
+  background: rgba(241, 254, 253, 1);
+  border-radius: 3px;
+}
+
+.num-data {
+  width: 1.89rem;
+  height: 0.8rem;
+  margin: 0 auto;
+  margin-top: 0.4rem;
+  /* border: 1px solid red; */
+  color: #05c1ae;
+  /* font-size: 0.95rem; */
+  line-height: 0.7rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* 统计数据 */
+
+.num-data span {
+  font-size: 0.7rem;
+  line-height: 0.6rem;
+}
+
+.num-data .null-data {
+  font-size: 0.6rem;
+}
+
+.num-data span.decimal {
+  font-size: 0.4rem;
+  font-weight: normal;
+}
+
+.num-data span.grey {
+  color: #a7b2bc;
+  font-size: 0.3rem;
+  font-weight: normal;
+}
+
+/* 数据类型描述 */
+
+.des-block .num-describe {
+  color: #a5a9af;
+  font-size: 0.32rem;
+  line-height: 0.31rem;
+  text-align: center;
+  margin-top: 0.35rem;
+}
+
+/* 班级统计 */
+
+.class-count {
+  width: 100%;
+  height: 1rem;
+  line-height: 1.15rem;
+  font-size: 0.32rem;
+  padding: 0 0.45rem;
+}
+
+.class-count span {
+  line-height: 1rem;
+  color: #666666;
+}
+
+.class-count .class-count-num {
+  line-height: 1rem;
+  margin-left: 0.1rem;
+  color: #05c1ae;
+}
+
+.before-line::before {
+  content: '|';
+  display: inline-block;
+  height: 0.45rem;
+  margin: 0 0.3rem;
+  font-size: 0.25rem;
+  vertical-align: middle;
+  line-height: 0.4rem;
+  color: #e6edf6;
+}
+
+/* 总览栏end */
+
+/* 成绩分布start */
+
+/* 图表 */
+
+.total-score-content {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+#eChart {
+  margin: 0.25rem 0;
+  margin-left: 1.1rem;
+  width: 3.3rem;
+  height: 3.3rem;
+  /* border: 1px solid red; */
+}
+
+/* 成绩分等 */
+
+.score-classify {
+  margin: 0.3rem 0.5rem;
+  width: 4rem;
+  height: 3.3rem;
+  /* border: 1px solid red; */
+  box-sizing: border-box;
+}
+
+.score-classify .score {
+  width: 4.6rem;
+  height: 0.825rem;
+  font-size: 0.32rem;
+  line-height: 0.825rem;
+}
+
+.score-classify .score em {
+  display: inline-block;
+  vertical-align: baseline;
+  width: 0.213333rem;
+  height: 0.213333rem;
+  border-radius: 0.08rem;
+  margin-right: 0.2rem;
+}
+
+.score-good em {
+  background: #08c0a0;
+}
+
+.score-fine em {
+  background: #17dcba;
+}
+
+.score-Pass em {
+  background: #61fde2;
+}
+
+.score-unPass em {
+  background: #ff673e;
+}
+
+.score span {
+  color: #666666;
+  margin-left: 0.15rem;
+}
+
+/* 成绩分布end */
+
+/* 二维码 */
+
+.QRcode {
+  position: relative;
+  width: 100%;
+  height: 4.5rem;
+  background: white;
+  font-size: 0.35rem;
+}
+
+.QRcode .QR-title {
+  line-height: 0.4rem;
+  margin-left: 1.58rem;
+  padding-top: 0.893rem;
+  color: #b7b8b9;
+}
+
+.QRcode .QR-title span {
+  color: #15cdad;
+}
+
+.QRcode .QR-block {
+  position: absolute;
+  width: 5.95rem;
+  height: 2.21rem;
+  /* margin-left: 2.57rem; */
+  left: 50%;
+  margin-left: -2.97rem;
+  /* margin: 0 auto; */
+  bottom: 0;
+  background-image: url('../image/QR-bg.png');
+  background-size: 100% 100%;
+}
+
+.QRcode .QR-block .QRcode {
+  width: 1.97rem;
+  height: 1.97rem;
+  /* margin-left: 1.44rem; */
+  margin: 0 auto;
+  /* background-image: url('../image/QRcode.png'); */
+  background-size: 100% 100%;
+}
+
+.QRcode .QR-block .QRcode img {
+  width: 100%;
+  height: 100%;
+}
+
+/* 二维码end */
+
+/* 底部start */
+
+/* .footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1rem;
+  background-color: white;
+  box-shadow: 15px 11px 38px rgba(181, 194, 201, 1)
+}
+
+.footer .footer-btn {
+  position: absolute;
+  left: 10%;
+  outline: none;
+  border: none;
+  width: 80%;
+  height: 1.1rem;
+  background: blue;
+  color: white;
+} */
+
+/* 底部end */
