@@ -114,8 +114,6 @@ var app = new Vue({
             var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/) //ios终端
             alert('是否是Android：'+isAndroid)
             alert('是否是iOS：'+isiOS)
-            alert('你是谁')
-            console.log('hello')
         }
     }
 })
