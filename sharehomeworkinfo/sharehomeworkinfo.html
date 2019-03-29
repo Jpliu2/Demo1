@@ -90,7 +90,7 @@
         <div id="share_tipBackview"></div>
         <div id="share_bottom">
             <span id="bottom_span">请在智学网APP内完成练习</span>
-            <button id="bottom_btn" onclick="openApp">打开应用</button>
+            <button id="bottom_btn">打开应用</button>
         </div>
     </div>
 </div>
@@ -115,15 +115,15 @@
                 e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
             }, {passive: false});
             $('#coverBackview').css('display','block');
-        }
+        };
         //打开应用
-        function openApp(){
+        $('#bottom_btn').click(function () {
             var u = navigator.userAgent, app = navigator.appVersion
             var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1 //android终端或者uc浏览器
             var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/) //ios终端
             alert('是否是Android：'+isAndroid)
             alert('是否是iOS：'+isiOS)
-        }
+        });
     });
 </script>
 </body>
