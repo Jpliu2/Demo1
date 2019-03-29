@@ -248,8 +248,8 @@ div,img,span,label {
 #bottom_btn {
     background-color: #05C1AE;
     border-radius: 5px;
-    display: none;
-    /*outline:none;*/
+    display: block;
+    outline:none;
     color: white;
     position: absolute;
     right: 15px;
