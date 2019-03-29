@@ -246,6 +246,7 @@ div,img,span,label {
 }
 
 #bottom_btn {
+    border: 0 transparent solid;
     background-color: #05C1AE;
     border-radius: 5px;
     display: block;
