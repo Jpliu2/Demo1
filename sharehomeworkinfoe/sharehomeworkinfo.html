@@ -23,7 +23,11 @@
     <link type="text/css" rel="styleSheet" href="./css/index.css" />
 </head>
 <body>
-<img style="position: absolute;left: -500px;top: -500px;" src="image/icon_image@2x.png" alt=""/>
+<!--网页中紧接着<body>加一个-->
+<div style='margin:0 auto;width:0px;height:0px;overflow:hidden;'>
+    <!--图片宽高大于400px，最好是一个正方形的图片-->
+    <img src="./image/icon_image@2x.png" width='700'>
+</div>
 <div class="wrap" id="app" v-cloak>
     <img id="share_leftImage" src="./image/share_leftImg@2x.png" alt=""/>
     <img id="share_rightImage" src="./image/share_rightImg@2x.png" alt=""/>
