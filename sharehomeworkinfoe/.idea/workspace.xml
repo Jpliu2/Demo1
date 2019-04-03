@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="df8377dc-e66d-4a96-bc5b-55ab3a7f81ee" name="Default Changelist" comment="" />
+    <list default="true" id="df8377dc-e66d-4a96-bc5b-55ab3a7f81ee" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../sharehomeworkinfo/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sharehomeworkinfo/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sharehomeworkinfo/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sharehomeworkinfo/.idea/sharehomeworkinfo.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sharehomeworkinfo/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sharehomeworkinfo/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sharehomeworkinfo/css/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sharehomeworkinfo/image/cover_tipImage@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sharehomeworkinfo/image/icon_image@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sharehomeworkinfo/image/share_center_iconImg@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sharehomeworkinfo/image/share_default_image@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sharehomeworkinfo/image/share_leftIcon@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sharehomeworkinfo/image/share_leftImg@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sharehomeworkinfo/image/share_network_error@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sharehomeworkinfo/image/share_noData_error@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sharehomeworkinfo/image/share_rightIcon@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sharehomeworkinfo/image/share_rightImg@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sharehomeworkinfo/js/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sharehomeworkinfo/js/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sharehomeworkinfo/js/vue.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sharehomeworkinfo/sharehomeworkinfo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sharehomeworkinfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/sharehomeworkinfo.html" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -16,10 +39,21 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sharehomeworkinfo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="61">
-              <caret line="106" column="11" lean-forward="true" selection-start-line="106" selection-start-column="11" selection-end-line="106" selection-end-column="11" />
+            <state relative-caret-position="337">
+              <caret line="34" column="44" lean-forward="true" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/vue.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -53,10 +87,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="40" />
-    <option name="y" value="625" />
-    <option name="width" value="1405" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="146" />
+    <option name="y" value="77" />
+    <option name="width" value="1406" />
     <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -70,22 +104,12 @@
         <subPane>
           <expand>
             <path>
-              <item name="sharehomeworkinfo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sharehomeworkinfo" type="462c0819:PsiDirectoryNode" />
+              <item name="sharehomeworkinfoe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharehomeworkinfoe" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="sharehomeworkinfo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sharehomeworkinfo" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sharehomeworkinfo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sharehomeworkinfo" type="462c0819:PsiDirectoryNode" />
-              <item name="image" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sharehomeworkinfo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sharehomeworkinfo" type="462c0819:PsiDirectoryNode" />
+              <item name="sharehomeworkinfoe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sharehomeworkinfoe" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -133,14 +157,15 @@
       <workItem from="1554254914285" duration="4524000" />
       <workItem from="1554272797881" duration="2399000" />
       <workItem from="1554275687453" duration="147000" />
+      <workItem from="1554276380799" duration="44000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11516000" />
+    <option name="totallyTimeSpent" value="11560000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="40" y="625" width="1405" height="877" extended-state="0" />
+    <frame x="35" y="23" width="1405" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24855492" />
@@ -183,12 +208,11 @@
     <entry file="file://$PROJECT_DIR$/image/share_center_iconImg@2x.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/sharehomeworkinfo.html">
+    <entry file="file://$PROJECT_DIR$/js/vue.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="106" column="11" lean-forward="true" selection-start-line="106" selection-start-column="11" selection-end-line="106" selection-end-column="11" />
+        <state>
           <folding>
-            <element signature="n#style#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -197,6 +221,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="36" column="50" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sharehomeworkinfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="34" column="44" lean-forward="true" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
