@@ -24,6 +24,27 @@
       <change beforePath="$PROJECT_DIR$/../sharehomeworkinfo/js/vue.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../sharehomeworkinfo/sharehomeworkinfo.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/sharehomeworkinfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/sharehomeworkinfo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testH5/sharehomeworkinfoe/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testH5/sharehomeworkinfoe/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testH5/sharehomeworkinfoe/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testH5/sharehomeworkinfoe/.idea/sharehomeworkinfo.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testH5/sharehomeworkinfoe/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testH5/sharehomeworkinfoe/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testH5/sharehomeworkinfoe/css/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testH5/sharehomeworkinfoe/image/cover_tipImage@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testH5/sharehomeworkinfoe/image/icon_image@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testH5/sharehomeworkinfoe/image/share_center_iconImg@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testH5/sharehomeworkinfoe/image/share_default_image@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testH5/sharehomeworkinfoe/image/share_leftIcon@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testH5/sharehomeworkinfoe/image/share_leftImg@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testH5/sharehomeworkinfoe/image/share_network_error@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testH5/sharehomeworkinfoe/image/share_noData_error@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testH5/sharehomeworkinfoe/image/share_rightIcon@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testH5/sharehomeworkinfoe/image/share_rightImg@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testH5/sharehomeworkinfoe/js/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testH5/sharehomeworkinfoe/js/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testH5/sharehomeworkinfoe/js/vue.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testH5/sharehomeworkinfoe/sharehomeworkinfo.html" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -39,10 +60,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sharehomeworkinfo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+            <state relative-caret-position="217">
+              <caret line="26" column="70" lean-forward="true" selection-start-line="26" selection-start-column="70" selection-end-line="26" selection-end-column="70" />
               <folding>
-                <element signature="n#style#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -87,9 +108,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="146" />
-    <option name="y" value="77" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="34" />
+    <option name="y" value="23" />
     <option name="width" value="1406" />
     <option name="height" value="877" />
   </component>
@@ -158,17 +179,18 @@
       <workItem from="1554272797881" duration="2399000" />
       <workItem from="1554275687453" duration="147000" />
       <workItem from="1554276380799" duration="103000" />
+      <workItem from="1554277503118" duration="24000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11619000" />
+    <option name="totallyTimeSpent" value="11643000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="35" y="23" width="1405" height="877" extended-state="6" />
+    <frame x="34" y="23" width="1406" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24855492" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24837545" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -208,6 +230,16 @@
     <entry file="file://$PROJECT_DIR$/image/share_center_iconImg@2x.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/sharehomeworkinfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="26" column="70" lean-forward="true" selection-start-line="26" selection-start-column="70" selection-end-line="26" selection-end-column="70" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/vue.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -221,16 +253,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="36" column="50" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sharehomeworkinfo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
