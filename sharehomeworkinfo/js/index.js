@@ -21,7 +21,7 @@ var app = new Vue({
             type: 'POST',
             url:
                 // (this.isTestApi ? '//mhwtest.zhixue.com' : '//mehwapi.changyan.com') +
-                // timestamp(
+                // (
                 //     '/homework_middle_customer_service/homeworkReportService/getShareHomeworkInfo'
                 // ),
             // 测试url
