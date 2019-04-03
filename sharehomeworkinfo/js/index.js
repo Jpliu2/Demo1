@@ -44,7 +44,7 @@ var app = new Vue({
                 } else {
                     that.isRequestSuccess = false
                     console.log(data)
-                    document.title = '数据异常'
+                    document.title = '你是什么人11111'
                     that.tipText = '加载失败，请稍后重试～'
                     that.tipImageSrc = './image/share_noData_error@2x.png'
                 }
@@ -52,7 +52,7 @@ var app = new Vue({
             error: function(err) {
                 //判断是否没有网络
                 this.isRequestSuccess = false
-                document.title = "网络异常"
+                document.title = "你是什么人。。。。"
                 that.tipText = '无法连接至网络哦～'
                 that.tipImageSrc = './image/share_network_error@2x.png'
             }
