@@ -25,7 +25,7 @@ var app = new Vue({
                 //     '/homework_middle_customer_service/homeworkReportService/getShareHomeworkInfo'
                 // ),
             // 测试url
-            'http://172.31.223.17:30338/homework_middle_customer_service/homeworkReportService/getShareHomeworkInfo',
+            'https://mhwtest.zhixue.com/homework_middle_customer_service/homeworkReportService/getShareHomeworkInfo',
             data:
                 'hwId=' + this.getQueryObject().hwId,
             success: function(data) {
