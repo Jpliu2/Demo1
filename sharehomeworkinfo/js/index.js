@@ -27,7 +27,7 @@ var app = new Vue({
             // 测试url
             'http://172.31.223.17:30338/homework_middle_customer_service/homeworkReportService/getShareHomeworkInfo',
             data:
-                'hwId=' + (this.getQueryObject().hwId || '23756a5c-805e-4cfb-a238-e18cfbcf25f7' ),
+                'hwId=' + this.getQueryObject().hwId,
             success: function(data) {
                 //判断数据时候获取异常
                 if (data.code == 200) {
