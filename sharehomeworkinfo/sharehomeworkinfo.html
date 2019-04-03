@@ -90,7 +90,7 @@
         <div id="share_tipBackview"></div>
         <div id="share_bottom">
             <span id="bottom_span">请在智学网APP内完成练习</span>
-            <button id="bottom_btn">打开应用</button>
+            <a><button id="bottom_btn">打开应用</button></a>
         </div>
     </div>
 </div>
@@ -118,7 +118,7 @@
         };
 
         //打开应用
-        $('#bottom_btn').click(function () {
+        $('a').click(function () {
             var u = navigator.userAgent, app = navigator.appVersion;
             var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
             var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
@@ -127,11 +127,19 @@
             //打开appstore或app
             if (isiOS) {
                 //appstore商店
-                window.location = "https://itunes.apple.com/cn/app/智学网-让学习更简单/id981030648?mt=8"; //ios下载地址
+                $('a').attr('href','https://itunes.apple.com/cn/app/智学网-让学习更简单/id981030648?mt=8');
+                //判断app是否安装
+                var ifr = document.createElement('iframe');
+                ifr.src = 'zhixue://';
+                ifr.style.display = 'none';
+                document.body.appendChild(ifr);
+                setTimeout(function(){
+                    document.body.removeChild(ifr);
+                }, 3000);
             }
             //打开android应用或应用宝
             if (isAndroid) {
-                window.location =  'http://www.wjtr.com/download/index.html';
+                $('a').attr('href','http://www.wjtr.com/download/index.html');
             }
         });
     });
