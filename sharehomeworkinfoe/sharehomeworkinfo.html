@@ -114,13 +114,13 @@
 <script src="js/index.js"></script>
 <script type="text/javascript">
     $(function () {
-        //判断h5是否从微信进入
-        if(window.navigator.userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger'){
-            document.body.addEventListener('touchmove', function (e) {
-                e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
-            }, {passive: false});
-            $('#coverBackview').css('display','block');
-        };
+        // //判断h5是否从微信进入
+        // if(window.navigator.userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger'){
+        //     document.body.addEventListener('touchmove', function (e) {
+        //         e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
+        //     }, {passive: false});
+        //     $('#coverBackview').css('display','block');
+        // };
 
         //打开应用
         $('a').click(function () {
