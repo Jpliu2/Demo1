@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df8377dc-e66d-4a96-bc5b-55ab3a7f81ee" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/image/icon_image@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/icon_image@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sharehomeworkinfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/sharehomeworkinfo.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sharehomeworkinfo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
-              <caret line="122" column="13" selection-start-line="122" selection-start-column="13" selection-end-line="122" selection-end-column="13" />
+            <state relative-caret-position="150">
+              <caret line="10" column="61" selection-start-line="10" selection-start-column="61" selection-end-line="10" selection-end-column="61" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -157,12 +157,12 @@
       <workItem from="1554275687453" duration="147000" />
       <workItem from="1554276380799" duration="103000" />
       <workItem from="1554277503118" duration="2337000" />
-      <workItem from="1554338237869" duration="3226000" />
+      <workItem from="1554338237869" duration="3379000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17182000" />
+    <option name="totallyTimeSpent" value="17335000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="211" y="160" width="1403" height="877" extended-state="0" />
@@ -203,8 +203,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sharehomeworkinfo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="122" column="13" selection-start-line="122" selection-start-column="13" selection-end-line="122" selection-end-column="13" />
+        <state relative-caret-position="150">
+          <caret line="10" column="61" selection-start-line="10" selection-start-column="61" selection-end-line="10" selection-end-column="61" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
