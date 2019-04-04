@@ -124,6 +124,14 @@
 
         //打开应用
         $('a').click(function () {
+
+            if(window.navigator.userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger'){
+                document.body.addEventListener('touchmove', function (e) {
+                    e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
+                }, {passive: false});
+                $('#coverBackview').css('display','block');
+            };
+
             var u = navigator.userAgent, app = navigator.appVersion;
             var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
             var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端

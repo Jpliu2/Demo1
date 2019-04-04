@@ -18,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sharehomeworkinfo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="466">
-              <caret line="138" column="28" lean-forward="true" selection-start-line="136" selection-start-column="15" selection-end-line="138" selection-end-column="28" />
+            <state relative-caret-position="271">
+              <caret line="125" column="34" lean-forward="true" selection-start-line="125" selection-start-column="34" selection-end-line="125" selection-end-column="34" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -157,12 +157,12 @@
       <workItem from="1554275687453" duration="147000" />
       <workItem from="1554276380799" duration="103000" />
       <workItem from="1554277503118" duration="2337000" />
-      <workItem from="1554338237869" duration="2006000" />
+      <workItem from="1554338237869" duration="2135000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15962000" />
+    <option name="totallyTimeSpent" value="16091000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-24" y="23" width="1403" height="877" extended-state="0" />
@@ -203,8 +203,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sharehomeworkinfo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="138" column="28" lean-forward="true" selection-start-line="136" selection-start-column="15" selection-end-line="138" selection-end-column="28" />
+        <state relative-caret-position="271">
+          <caret line="125" column="34" lean-forward="true" selection-start-line="125" selection-start-column="34" selection-end-line="125" selection-end-column="34" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
