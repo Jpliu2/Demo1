@@ -91,7 +91,7 @@
                 <span class="step_span_tip">第二步：使用学生智学网账号密码登录；</span>
             </div>
             <div class="step_div_tip">
-                <span class="step_span_tip">第久步：而人定胜天戈德哈根在首页点击“练习中心”查看练习。</span>
+                <span class="step_span_tip">第久suh步：而人定胜天戈德哈根在首页点击“练习中心”查看练习。</span>
             </div>
         </div>
         <!--空白容器-->
@@ -156,7 +156,7 @@
 
         //打开应用
         $('a').click(function () {
-            if(GetMobelType.weixin){
+            if(window.navigator.userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger'){
                 alert("从微信浏览器打开");
                 document.body.addEventListener('touchmove', function (e) {
                     e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
@@ -185,9 +185,6 @@
                 $('a').attr('href','http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning');
             }
         });
-
-
-
     });
 </script>
 </body>
