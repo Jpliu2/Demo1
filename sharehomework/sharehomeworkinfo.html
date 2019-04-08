@@ -17,6 +17,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,minimal-ui"/>
     <title>练习通知</title>
     <link rel="icon" href="data:;base64,="/>
+    <script src="js/base.js"></script>
     <script src="js/jquery.js"></script>
     <style>
         [v-cloak] {
@@ -145,7 +146,8 @@
             //打开appstore或app
             if (isiOS) {
                 //appstore商店
-                window.location.href = "zhixue://www.zhixue.com?{'productTag':'kdkt','productParams':{'module':'kdkt_course_catalog','densityType':79}}";
+                var url = "zhixue://www.zhixue.com?{'productTag':'kdkt','productParams':{'module':'kdkt_course_catalog','densityType':79}}";
+                window.location.href = $.base64.decode(url);
                 // window.location.href = "zhixue://";
                 // window.location.href = "zhixue://www.zhixue.com?jumpHomeworkList";
                 // window.location.href = "zhixue://www.zhixue.com?{'productTag':'kdkt','productParams':{'module':'kdkt_course_catalog','densityType':79}}";
