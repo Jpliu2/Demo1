@@ -127,7 +127,7 @@
             alert(app);
             alert(common);
             alert(appCommon);
-            alert(window.navigator);
+            alert(u.toLowerCase());
             // if(window.navigator.userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger'){
             //     alert("从微信浏览器打开");
             //     document.body.addEventListener('touchmove', function (e) {
@@ -142,16 +142,17 @@
             // // console.log('是否是Android：'+isAndroid);
             // // alert('是否是Android：'+isiOS);
             // // console.log('是否是iOS：'+isiOS);
-            // //打开appstore或app
-            // if (isiOS) {
-            //     //appstore商店
-            //     window.location.href = "zhixue://";
-            //     // window.location.href = "zhixue://www.zhixue.com?jumpHomeworkList";
-            //     // window.location.href = "zhixue://www.zhixue.com?{'productTag':'kdkt','productParams':{'module':'kdkt_course_catalog','densityType':79}}";
-            //     // timer = setTimeout(function() {
-            //     //     window.location.href = "https://itunes.apple.com/cn/app/智学网-让学习更简单/id981030648?mt=8";
-            //     // }, 3000);
-            // }
+            //打开appstore或app
+            if (isiOS) {
+                //appstore商店
+                window.location.href = "zhixue://www.zhixue.com?{'productTag':'kdkt','productParams':{'module':'kdkt_course_catalog','densityType':79}}";
+                // window.location.href = "zhixue://";
+                // window.location.href = "zhixue://www.zhixue.com?jumpHomeworkList";
+                // window.location.href = "zhixue://www.zhixue.com?{'productTag':'kdkt','productParams':{'module':'kdkt_course_catalog','densityType':79}}";
+                // timer = setTimeout(function() {
+                //     window.location.href = "https://itunes.apple.com/cn/app/智学网-让学习更简单/id981030648?mt=8";
+                // }, 3000);
+            }
             // //打开android应用或应用宝
             // if (isAndroid) {
             //     $('a').attr('href','http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning');
