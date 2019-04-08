@@ -91,7 +91,7 @@
                 <span class="step_span_tip">第二步：使用学生智学网账号密码登录；</span>
             </div>
             <div class="step_div_tip">
-                <span class="step_span_tip">第久suh步：而人定胜天戈德哈根在首页点击“练习中心”查看练习。</span>
+                <span class="step_span_tip">第久i素福步：而人定胜天戈德哈根在首页点击“练习中心”查看练习。</span>
             </div>
         </div>
         <!--空白容器-->
@@ -117,73 +117,45 @@
 <script src="js/index.js"></script>
 <script type="text/javascript">
     $(function () {
-        //判断一写常用设置
-        function GetMobelType() {
-            var browser  =   {
-                versions:   function()  {
-                    var  u  =  window.navigator.userAgent;
-                    return  {
-                        // trident:  u.indexOf('Trident')  >  -1, //IE内核
-                        // presto:  u.indexOf('Presto')  >  -1, //opera内核
-                        // Alipay:  u.indexOf('Alipay')  >  -1, //支付宝
-                        // webKit:  u.indexOf('AppleWebKit')  >  -1, //苹果、谷歌内核
-                        // gecko:  u.indexOf('Gecko')  >  -1  &&  u.indexOf('KHTML')  ==  -1, //火狐内核
-                        // mobile:  !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
-                        ios:  !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
-                        android:  u.indexOf('Android')  >  -1  ||  u.indexOf('Linux')  >  -1, //android终端或者uc浏览器
-                        // iPhone:  u.indexOf('iPhone')  >  -1  ||  u.indexOf('Mac')  >  -1, //是否为iPhone或者安卓QQ浏览器
-                        //iPhone: u.match(/iphone|ipod|ipad/),//
-                        // iPad:  u.indexOf('iPad')  >  -1, //是否为iPad
-                        // webApp:  u.indexOf('Safari')  ==  -1, //是否为web应用程序，没有头部与底部
-                        weixin:  u.indexOf('MicroMessenger')  >  -1, //是否为微信浏览器
-                        qq: u.match(/\sQQ/i) !== null, //是否QQ
-                        // Safari:  u.indexOf('Safari')  >  -1,
-                        ///Safari浏览器,
-                    };
-                }()
-            };
-            return  browser.versions;
-        }
-
-        //判断h5是否从微信进入
-        // if(GetMobelType.weixin){
-        //     alert("从微信浏览器打开");
-        //     document.body.addEventListener('touchmove', function (e) {
-        //         e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
-        //     }, {passive: false});
-        //     $('#coverBackview').css('display','block');
-        // };
-
         //打开应用
         $('a').click(function () {
-            if(window.navigator.userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger'){
-                alert("从微信浏览器打开");
-                document.body.addEventListener('touchmove', function (e) {
-                    e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
-                }, {passive: false});
-                $('#coverBackview').css('display','block');
-            };
-
             var u = navigator.userAgent, app = navigator.appVersion;
+            var common = window.navigator.userAgent, appCommon = window.navigator.appVersion;
             var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
             var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
-            // console.log('是否是Android：'+isAndroid);
-            // alert('是否是Android：'+isiOS);
-            // console.log('是否是iOS：'+isiOS);
-            //打开appstore或app
-            if (isiOS) {
-                //appstore商店
-                window.location.href = "zhixue://";
-                // window.location.href = "zhixue://www.zhixue.com?jumpHomeworkList";
-                // window.location.href = "zhixue://www.zhixue.com?{'productTag':'kdkt','productParams':{'module':'kdkt_course_catalog','densityType':79}}";
-                // timer = setTimeout(function() {
-                //     window.location.href = "https://itunes.apple.com/cn/app/智学网-让学习更简单/id981030648?mt=8";
-                // }, 3000);
-            }
-            //打开android应用或应用宝
-            if (isAndroid) {
-                $('a').attr('href','http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning');
-            }
+            alert(u);
+            alert(app);
+            alert(common);
+            alert(appCommon);
+            alert(window.navigator);
+            // if(window.navigator.userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger'){
+            //     alert("从微信浏览器打开");
+            //     document.body.addEventListener('touchmove', function (e) {
+            //         e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
+            //     }, {passive: false});
+            //     $('#coverBackview').css('display','block');
+            // };
+            //
+            //
+            // var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
+            // var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+            // // console.log('是否是Android：'+isAndroid);
+            // // alert('是否是Android：'+isiOS);
+            // // console.log('是否是iOS：'+isiOS);
+            // //打开appstore或app
+            // if (isiOS) {
+            //     //appstore商店
+            //     window.location.href = "zhixue://";
+            //     // window.location.href = "zhixue://www.zhixue.com?jumpHomeworkList";
+            //     // window.location.href = "zhixue://www.zhixue.com?{'productTag':'kdkt','productParams':{'module':'kdkt_course_catalog','densityType':79}}";
+            //     // timer = setTimeout(function() {
+            //     //     window.location.href = "https://itunes.apple.com/cn/app/智学网-让学习更简单/id981030648?mt=8";
+            //     // }, 3000);
+            // }
+            // //打开android应用或应用宝
+            // if (isAndroid) {
+            //     $('a').attr('href','http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning');
+            // }
         });
     });
 </script>
