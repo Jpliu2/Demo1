@@ -18,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sharehomeworkinfo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="249" column="47" selection-start-line="249" selection-start-column="47" selection-end-line="249" selection-end-column="47" />
+            <state relative-caret-position="515">
+              <caret line="250" column="217" selection-start-line="250" selection-start-column="217" selection-end-line="250" selection-end-column="217" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -48,9 +48,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="507" />
-    <option name="y" value="519" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="86" />
+    <option name="y" value="794" />
     <option name="width" value="1403" />
     <option name="height" value="877" />
   </component>
@@ -133,15 +133,15 @@
       <workItem from="1554338237869" duration="3880000" />
       <workItem from="1554355589232" duration="1420000" />
       <workItem from="1554683971146" duration="5908000" />
-      <workItem from="1554770256204" duration="2614000" />
+      <workItem from="1554770256204" duration="2890000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27778000" />
+    <option name="totallyTimeSpent" value="28054000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-111" y="23" width="1403" height="877" extended-state="0" />
+    <frame x="-238" y="96" width="1403" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15050651" />
@@ -209,8 +209,8 @@
     <entry file="file://$PROJECT_DIR$/js/base.js" />
     <entry file="file://$PROJECT_DIR$/sharehomeworkinfo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="249" column="47" selection-start-line="249" selection-start-column="47" selection-end-line="249" selection-end-column="47" />
+        <state relative-caret-position="515">
+          <caret line="250" column="217" selection-start-line="250" selection-start-column="217" selection-end-line="250" selection-end-column="217" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
