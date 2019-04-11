@@ -120,9 +120,6 @@
     $(function () {
         //监听程序时候进入后台
         document.addEventListener("visibilitychange",function(){
-            if(document.visibilityState=="visible"){
-                window.location.reload(true);
-            }
             if(document.visibilityState=="hidden"){
                 window.location.reload(true);
             }
@@ -153,8 +150,7 @@
                 if (isAndroid) {
                     //android
                     var downLoadUrl = "http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning";
-                    // var jumpUrl = "zhixueapp://com.iflytek.elpmobile.smartlearning/open?destination=homeworkList";
-                    var jumpUrl = "weixin://";
+                    var jumpUrl = "zhixueapp://com.iflytek.elpmobile.smartlearning/open?destination=homeworkList";
                     var ifr = document.createElement('iframe');
                     ifr.src = jumpUrl;
                     ifr.style.display = 'none';
