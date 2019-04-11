@@ -92,7 +92,7 @@
                 <span class="step_span_tip">第二步：使用学生智学网账号密码登录；</span>
             </div>
             <div class="step_div_tip">
-                <span class="step_span_tip">第吧dsf步：在首页点击“练习中心”查看练习。</span>
+                <span class="step_span_tip">第规划吧dsf步：在首页点击“练习中心”查看练习。</span>
             </div>
         </div>
         <!--空白容器-->
@@ -139,6 +139,7 @@
 
                 if (isAndroid) {
                     //android
+                    alert("安卓移动端");
                     var downLoadUrl = "http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning";
                     var jumpUrl = "zhixueapp://com.iflytek.elpmobile.smartlearning/open?destination=homeworkList";
                     openAndroidApp(downLoadUrl,jumpUrl);
@@ -162,12 +163,14 @@
             var timeout, t = 1000, hasApp = true;
             var openScript = setTimeout(function () {
                 if (!hasApp) {
+                    alert("安卓移动端");
                     window.location.href=downloadUrl;
                 }
                 document.body.removeChild(ifr);
             }, 2000)
 
             var t1 = Date.now();
+            alert("安卓移动端");
             var ifr = document.createElement("iframe");
             ifr.setAttribute('src', jumpUrl);
             ifr.setAttribute('style', 'display:none');
