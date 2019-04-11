@@ -134,7 +134,7 @@
                     //ios
                     var downLoadUrl = "https://itunes.apple.com/cn/app/智学网-让学习更简单/id981030648?mt=8";
                     var jumpUrl = "zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=";
-                    openIOSApp(downLoadUrl,jumpUrl);
+                    // openIOSApp(downLoadUrl,jumpUrl);
                 }
 
                 if (isAndroid) {
@@ -142,8 +142,6 @@
                     var jumpUrl = "zhixueapp://com.iflytek.elpmobile.smartlearning/open?destination=homeworkList";
                     var d = new Date();
                     var t0 = d.getTime();
-                    var value = openApp(jumpUrl);
-                    alert('5'+value);
                     if(openApp(jumpUrl)){
                         openApp(jumpUrl);
                     } else {
@@ -163,30 +161,15 @@
             }
         });
 
-        function openIOSApp(downloadUrl,jumpUrl) {
-            var hasApp = true;
-            window.location.href = jumpUrl;
-            window.onbeforeunload = function() {
-                alert("Leave this page?");
-                hasApp = false;
-            }
-            if (hasApp) {
-                window.location.href = downloadUrl;
-            }
-        }
-
         function openApp(src) {
             // 通过iframe的方式试图打开APP，如果能正常打开，会直接切换到APP，并自动阻止a标签的默认行为
             // 否则打开a标签的href链接
-            alert("true");
             var ifr = document.createElement('iframe');
             ifr.src = 'weixin://';
             ifr.style.display = 'none';
             document.body.appendChild(ifr);
             window.setTimeout(function(){
                 document.body.removeChild(ifr);
-                alert("false");
-                return false;
             },2000);
         }
     });
