@@ -142,7 +142,8 @@
                     var jumpUrl = "zhixueapp://com.iflytek.elpmobile.smartlearning/open?destination=homeworkList";
                     var d = new Date();
                     var t0 = d.getTime();
-                    alert(openApp(jumpUrl));
+                    var value = openApp(jumpUrl);
+                    alert('5'+value);
                     if(openApp(jumpUrl)){
                         openApp(jumpUrl);
                     } else {
@@ -177,12 +178,14 @@
         function openApp(src) {
             // 通过iframe的方式试图打开APP，如果能正常打开，会直接切换到APP，并自动阻止a标签的默认行为
             // 否则打开a标签的href链接
+            alert(true);
             var ifr = document.createElement('iframe');
             ifr.src = 'zhixueapp://';
             ifr.style.display = 'none';
             document.body.appendChild(ifr);
             window.setTimeout(function(){
                 document.body.removeChild(ifr);
+                alert(false);
                 return false;
             },2000);
         }
