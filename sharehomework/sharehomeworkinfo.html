@@ -118,104 +118,39 @@
 <script src="js/index.js"></script>
 <script type="text/javascript">
     $(function () {
-        // //Base64编码、解码
-        // var Base64 = {
-        //     _keyStr: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
-        //     encode: function(e) {
-        //         var t = "";
-        //         var n, r, i, s, o, u, a;
-        //         var f = 0;
-        //         e = Base64._utf8_encode(e);
-        //         while (f < e.length) {
-        //             n = e.charCodeAt(f++);
-        //             r = e.charCodeAt(f++);
-        //             i = e.charCodeAt(f++);
-        //             s = n >> 2;
-        //             o = (n & 3) << 4 | r >> 4;
-        //             u = (r & 15) << 2 | i >> 6;
-        //             a = i & 63;
-        //             if (isNaN(r)) {
-        //                 u = a = 64
-        //             } else if (isNaN(i)) {
-        //                 a = 64
-        //             }
-        //             t = t + this._keyStr.charAt(s) + this._keyStr.charAt(o) + this._keyStr.charAt(u) + this._keyStr.charAt(a)
-        //         }
-        //         return t
-        //     },
-        //     decode: function(e) {
-        //         var t = "";
-        //         var n, r, i;
-        //         var s, o, u, a;
-        //         var f = 0;
-        //         e = e.replace(/[^A-Za-z0-9+/=]/g, "");
-        //         while (f < e.length) {
-        //             s = this._keyStr.indexOf(e.charAt(f++));
-        //             o = this._keyStr.indexOf(e.charAt(f++));
-        //             u = this._keyStr.indexOf(e.charAt(f++));
-        //             a = this._keyStr.indexOf(e.charAt(f++));
-        //             n = s << 2 | o >> 4;
-        //             r = (o & 15) << 4 | u >> 2;
-        //             i = (u & 3) << 6 | a;
-        //             t = t + String.fromCharCode(n);
-        //             if (u != 64) {
-        //                 t = t + String.fromCharCode(r)
-        //             }
-        //             if (a != 64) {
-        //                 t = t + String.fromCharCode(i)
-        //             }
-        //         }
-        //         t = Base64._utf8_decode(t);
-        //         return t
-        //     },
-        //     _utf8_encode: function(e) {
-        //         e = e.replace(/rn/g, "n");
-        //         var t = "";
-        //         for (var n = 0; n < e.length; n++) {
-        //             var r = e.charCodeAt(n);
-        //             if (r < 128) {
-        //                 t += String.fromCharCode(r)
-        //             } else if (r > 127 && r < 2048) {
-        //                 t += String.fromCharCode(r >> 6 | 192);
-        //                 t += String.fromCharCode(r & 63 | 128)
-        //             } else {
-        //                 t += String.fromCharCode(r >> 12 | 224);
-        //                 t += String.fromCharCode(r >> 6 & 63 | 128);
-        //                 t += String.fromCharCode(r & 63 | 128)
-        //             }
-        //         }
-        //         return t
-        //     },
-        //     _utf8_decode: function(e) {
-        //         var t = "";
-        //         var n = 0;
-        //         var r = c1 = c2 = 0;
-        //         while (n < e.length) {
-        //             r = e.charCodeAt(n);
-        //             if (r < 128) {
-        //                 t += String.fromCharCode(r);
-        //                 n++
-        //             } else if (r > 191 && r < 224) {
-        //                 c2 = e.charCodeAt(n + 1);
-        //                 t += String.fromCharCode((r & 31) << 6 | c2 & 63);
-        //                 n += 2
-        //             } else {
-        //                 c2 = e.charCodeAt(n + 1);
-        //                 c3 = e.charCodeAt(n + 2);
-        //                 t += String.fromCharCode((r & 15) << 12 | (c2 & 63) << 6 | c3 & 63);
-        //                 n += 3
-        //             }
-        //         }
-        //         return t
-        //     }
-        // }
-
+        var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
+        var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+        var u = navigator.userAgent, app = navigator.appVersion;
         //打开应用
         $('a').click(function () {
-            var u = navigator.userAgent, app = navigator.appVersion;
-            var common = window.navigator.userAgent, appCommon = window.navigator.appVersion;
-            var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
-            var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+            if(window.navigator.userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger'){
+                alert("从微信浏览器打开");
+                document.body.addEventListener('touchmove', function (e) {
+                    e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
+                }, {passive: false});
+                $('#coverBackview').css('display','block');
+            } else {
+                if (isiOS){
+                    //ios
+                    // setTimeout(function () {
+                    //     window.location.href = "zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=";
+                    // },2000);
+                    // window.location.href = "https://itunes.apple.com/cn/app/智学网-让学习更简单/id981030648?mt=8";
+                    window.location.href = "zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=";
+                }
+
+                if (isAndroid) {
+                    //android
+
+                }
+            }
+        });
+
+        //打开应用
+        // $('a').click(function () {
+        //     var u = navigator.userAgent, app = navigator.appVersion;
+        //     var common = window.navigator.userAgent, appCommon = window.navigator.appVersion;
+
 
             // var params = "@{@'productTag':@'zyzx',@'productParams':@{@'module':@'hwlist_unfinished'}}";
             // console.log(params);
@@ -244,23 +179,23 @@
             // // alert('是否是Android：'+isiOS);
             // // console.log('是否是iOS：'+isiOS);
             //打开appstore或app
-            if (isiOS) {
-                //appstore商店
-                // var params = "@{@'productTag':@'zyzx',@'productParams':@{@'module':@'hwlist_unfinished'}}";
-                // params = json.loads(params);
-                window.location.href = "zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=";
-                // window.location.href = $.base64.decode(url);
-                // window.location.href = "zhixue://";
-                // window.location.href = "zhixue://www.zhixue.com?jumpHomeworkList";
-                // window.location.href = "zhixue://www.zhixue.com?{'productTag':'kdkt','productParams':{'module':'kdkt_course_catalog','densityType':79}}";
-                // timer = setTimeout(function() {
-                //     window.location.href = "https://itunes.apple.com/cn/app/智学网-让学习更简单/id981030648?mt=8";
-                // }, 3000);
+            // if (isiOS) {
+            //     //appstore商店
+            //     // var params = "@{@'productTag':@'zyzx',@'productParams':@{@'module':@'hwlist_unfinished'}}";
+            //     // params = json.loads(params);
+            //     window.location.href = "zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=";
+            //     // window.location.href = $.base64.decode(url);
+            //     // window.location.href = "zhixue://";
+            //     // window.location.href = "zhixue://www.zhixue.com?jumpHomeworkList";
+            //     // window.location.href = "zhixue://www.zhixue.com?{'productTag':'kdkt','productParams':{'module':'kdkt_course_catalog','densityType':79}}";
+            //     // timer = setTimeout(function() {
+            //     //     window.location.href = "https://itunes.apple.com/cn/app/智学网-让学习更简单/id981030648?mt=8";
+            //     // }, 3000);
             // }
-            // //打开android应用或应用宝
-            if (isAndroid) {
-                $('a').attr('href','http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning');
-            }
+            // // //打开android应用或应用宝
+            // if (isAndroid) {
+            //     $('a').attr('href','http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning');
+            // }
                 // window.location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning";
             // }
             //     timer = setTimeout(function() {
@@ -269,7 +204,7 @@
             //     // window.location.href = "scheme://";
             //     // $('a').attr('href','http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning');
             // }
-        });
+        // });
     });
 </script>
 </body>
