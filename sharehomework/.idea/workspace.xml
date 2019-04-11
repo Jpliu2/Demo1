@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df8377dc-e66d-4a96-bc5b-55ab3a7f81ee" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sharehomeworkinfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/sharehomeworkinfo.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -18,8 +19,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sharehomeworkinfo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="133" column="20" selection-start-line="133" selection-start-column="20" selection-end-line="133" selection-end-column="20" />
+            <state relative-caret-position="329">
+              <caret line="142" column="37" selection-start-line="142" selection-start-column="37" selection-end-line="142" selection-end-column="37" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -54,6 +55,7 @@
       <find>switchContext</find>
       <find>app</find>
       <find>timer</find>
+      <find>timeout</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -141,12 +143,12 @@
       <workItem from="1554683971146" duration="5908000" />
       <workItem from="1554770256204" duration="3914000" />
       <workItem from="1554857759919" duration="4753000" />
-      <workItem from="1554943098375" duration="3129000" />
+      <workItem from="1554943098375" duration="3872000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36960000" />
+    <option name="totallyTimeSpent" value="37703000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-27" y="23" width="1467" height="877" extended-state="0" />
@@ -210,8 +212,8 @@
     <entry file="file://$PROJECT_DIR$/js/base.js" />
     <entry file="file://$PROJECT_DIR$/sharehomeworkinfo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="133" column="20" selection-start-line="133" selection-start-column="20" selection-end-line="133" selection-end-column="20" />
+        <state relative-caret-position="329">
+          <caret line="142" column="37" selection-start-line="142" selection-start-column="37" selection-end-line="142" selection-end-column="37" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
