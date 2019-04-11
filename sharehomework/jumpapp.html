@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>跳到新App</title>
+    <meta name='apple-itunes-app' content='app-id=477927812'>
+</head>
+<body>
+    <a href="javascript:;" id="openApp">贴吧客户端</a>
+</body>
+<script type="text/javascript">
+document.getElementById('openApp').onclick = function(e){
+    if(navigator.userAgent.match(/(iPhone|iPod|iPad);?/i))
+    {
+        window.location.href = "com.baidu.tieba://";//ios app协议
+        window.setTimeout(function() {
+            window.location.href = "https://itunes.apple.com/cn/app/id477927812";
+        }, 2000)
+    }
+    if(navigator.userAgent.match(/android/i))
+    {
+        window.location.href = "com.baidu.tieba://app";//android app协议
+        window.setTimeout(function() {
+            window.location.href = "https://****.apk";//android 下载地址
+        }, 2000)
+    }
+};
+</script>
+</html>
+
