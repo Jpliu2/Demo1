@@ -139,13 +139,22 @@
 
                 if (isAndroid) {
                     //android
-                    $('a').attr('href','zhixueapp://com.iflytek.elpmobile.smartlearning/open?destination=homeworkList');
+                    var timeout, t = 1000, hasApp = true;
+                    var openScript = setTimeout(function () {
+                        if (!hasApp) {
+                            alert('store');
+                            $('a').attr('href', 'http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning');
+                        }
+                    }, 2000)
+
                     var t1 = Date.now();
-                    setTimeout(function () {
+                    alert('app');
+                    $('a').attr('href','zhixueapp://com.iflytek.elpmobile.smartlearning/open?destination=homeworkList');
+                    timeout = setTimeout(function () {
                         var t2 = Date.now();
                         if (!t1 || t2 - t1 < t + 100) {
-                            alert('应用超时');
-                            $('a').attr('href','http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning');
+                            alert('store123');
+                            hasApp = false;
                         }
                     }, t);
                 }
