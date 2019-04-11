@@ -150,6 +150,7 @@
                     timeout = setTimeout(function () {
                         var t2 = Date.now();
                         if (!t1 || t2 - t1 < t + 100) {
+                            alert('应用超时');
                             hasApp = false;
                         }
                     }, t);
