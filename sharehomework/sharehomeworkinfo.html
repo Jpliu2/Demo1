@@ -142,14 +142,10 @@
                     var timeout, t = 1000, hasApp = true;
                     var openScript = setTimeout(function () {
                         if (!hasApp) {
-                            alert("安卓移动端2");
                             $('a').attr('href','http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning');
                         }
                     }, 2000)
-
-                    alert("安卓移动端1");
-                    $('a').attr('href','http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning');
-                    // $('a').attr('href','zhixueapp://com.iflytek.elpmobile.smartlearning/open?destination=homeworkList');
+                    $('a').attr('href','zhixueapp://com.iflytek.elpmobile.smartlearning/open?destination=homeworkList');
                     var t1 = Date.now();
                     timeout = setTimeout(function () {
                         var t2 = Date.now();
