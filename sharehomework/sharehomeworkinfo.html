@@ -139,19 +139,13 @@
 
                 if (isAndroid) {
                     //android
-                    var timeout, t = 1000, hasApp = true;
-                    var openScript = setTimeout(function () {
-                        if (!hasApp) {
-                            $('a').attr('href','http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning');
-                        }
-                    }, 2000)
                     $('a').attr('href','zhixueapp://com.iflytek.elpmobile.smartlearning/open?destination=homeworkList');
                     var t1 = Date.now();
-                    timeout = setTimeout(function () {
+                    setTimeout(function () {
                         var t2 = Date.now();
                         if (!t1 || t2 - t1 < t + 100) {
                             alert('应用超时');
-                            hasApp = false;
+                            $('a').attr('href','http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning');
                         }
                     }, t);
                 }
