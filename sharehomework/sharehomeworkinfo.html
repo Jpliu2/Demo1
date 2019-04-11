@@ -92,7 +92,7 @@
                 <span class="step_span_tip">第二步：使用学生智学网账号密码登录；</span>
             </div>
             <div class="step_div_tip">
-                <span class="step_span_tip">第三步：在首页点击“练习中心”查看练习。</span>
+                <span class="step_span_tip">第九步：在首页点击“练习中心”查看练习。</span>
             </div>
         </div>
         <!--空白容器-->
@@ -118,12 +118,12 @@
 <script src="js/index.js"></script>
 <script type="text/javascript">
     $(function () {
-        var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
-        var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
-        var u = navigator.userAgent, app = navigator.appVersion;
         //打开应用
         $('a').click(function () {
-            if(window.navigator.userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger'){
+            var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
+            var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+            var u = navigator.userAgent, app = navigator.appVersion;
+            if(u.toLowerCase().match(/MicroMessenger/i) == 'micromessenger'){
                 alert("从微信浏览器打开");
                 document.body.addEventListener('touchmove', function (e) {
                     e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
@@ -131,6 +131,7 @@
                 $('#coverBackview').css('display','block');
             } else {
                 if (isiOS){
+                    alert('isIOS');
                     //ios
                     // setTimeout(function () {
                     //     window.location.href = "zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=";
@@ -141,6 +142,7 @@
 
                 if (isAndroid) {
                     //android
+                    alert('isAndroid');
 
                 }
             }
