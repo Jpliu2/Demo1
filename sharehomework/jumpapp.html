@@ -11,16 +11,19 @@
 document.getElementById('openApp').onclick = function(e){
     if(navigator.userAgent.match(/(iPhone|iPod|iPad);?/i))
     {
+        alert(document.hidden);
         var hasApp = true;
         if (document.hidden) {
             hasApp = false;
         }
         alert(hasApp);
+        alert(document.hidden);
         window.location.href = "zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=";//ios app协议
         if (document.hidden) {
             hasApp = false;
         }
         alert(hasApp);
+        alert(document.hidden);
         window.setTimeout(function() {
             window.location.href = "https://itunes.apple.com/cn/app/智学网-让学习更简单/id981030648?mt=8";
         }, 2000)

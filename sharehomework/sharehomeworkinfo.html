@@ -140,7 +140,7 @@
                 if (isAndroid) {
                     //android
                     var downLoadUrl = "http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning";
-                    var jumpUrl = "";
+                    var jumpUrl = "zhixueapp://com.iflytek.elpmobile.smartlearning/open?destination=homeworkList";
                 }
             }
         });
@@ -161,15 +161,14 @@
             var timeout, t = 1000, hasApp = true;
             var openScript = setTimeout(function () {
                 if (!hasApp) {
-                    var durl = "http:www.baidu.com";
-                    window.location.href=durl;
+                    window.location.href=downloadUrl;
                 }
                 document.body.removeChild(ifr);
             }, 2000)
 
             var t1 = Date.now();
             var ifr = document.createElement("iframe");
-            ifr.setAttribute('src', url);
+            ifr.setAttribute('src', jumpUrl);
             ifr.setAttribute('style', 'display:none');
             document.body.appendChild(ifr);
             timeout = setTimeout(function () {
@@ -179,66 +178,6 @@
                 }
             }, t);
         }
-
-        //打开应用
-        // $('a').click(function () {
-        //     var u = navigator.userAgent, app = navigator.appVersion;
-        //     var common = window.navigator.userAgent, appCommon = window.navigator.appVersion;
-
-
-            // var params = "@{@'productTag':@'zyzx',@'productParams':@{@'module':@'hwlist_unfinished'}}";
-            // console.log(params);
-            // var jsonParams = "{\'productParams\':{\'module\':\'hwlist_finished\'},\'productTag\':\'zyzx\'}";
-            // console.log(jsonParams);
-            // // console.log($.base64.encode(jsonParams));
-            // var encode = Base64.encode(jsonParams);
-            // console.log(encode);
-            // alert(u);
-            // alert(app);
-            // alert(common);
-            // alert(appCommon);
-            // alert(u.toLowerCase());
-            // if(window.navigator.userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger'){
-            //     alert("从微信浏览器打开");
-            //     document.body.addEventListener('touchmove', function (e) {
-            //         e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
-            //     }, {passive: false});
-            //     $('#coverBackview').css('display','block');
-            // };
-            //
-            //
-            // var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
-            // var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
-            // // console.log('是否是Android：'+isAndroid);
-            // // alert('是否是Android：'+isiOS);
-            // // console.log('是否是iOS：'+isiOS);
-            //打开appstore或app
-            // if (isiOS) {
-            //     //appstore商店
-            //     // var params = "@{@'productTag':@'zyzx',@'productParams':@{@'module':@'hwlist_unfinished'}}";
-            //     // params = json.loads(params);
-            //     window.location.href = "zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=";
-            //     // window.location.href = $.base64.decode(url);
-            //     // window.location.href = "zhixue://";
-            //     // window.location.href = "zhixue://www.zhixue.com?jumpHomeworkList";
-            //     // window.location.href = "zhixue://www.zhixue.com?{'productTag':'kdkt','productParams':{'module':'kdkt_course_catalog','densityType':79}}";
-            //     // timer = setTimeout(function() {
-            //     //     window.location.href = "https://itunes.apple.com/cn/app/智学网-让学习更简单/id981030648?mt=8";
-            //     // }, 3000);
-            // }
-            // // //打开android应用或应用宝
-            // if (isAndroid) {
-            //     $('a').attr('href','http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning');
-            // }
-                // window.location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning";
-            // }
-            //     timer = setTimeout(function() {
-            //         window.location.href = "https://itunes.apple.com/cn/app/智学网-让学习更简单/id981030648?mt=8";
-            //     }, 3000);
-            //     // window.location.href = "scheme://";
-            //     // $('a').attr('href','http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning');
-            // }
-        // });
     });
 </script>
 </body>
