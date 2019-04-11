@@ -148,7 +148,7 @@
         function openIOSApp(downloadUrl,jumpUrl) {
             var timeout, t = 1000, hasApp = true;
             var openScript = setTimeout(function () {
-                if (!hasApp) {
+                if (hasApp) {
                     alert('跳转到下载页面');
                     window.location.href = downloadUrl;
                 } else {
