@@ -141,60 +141,26 @@
                     //ios
                     var downLoadUrl = "https://itunes.apple.com/cn/app/智学网-让学习更简单/id981030648?mt=8";
                     var jumpUrl = "zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=";
-                    // openIOSApp(downLoadUrl,jumpUrl);
+                    setTimeout(function () {
+                        window.location.href = jumpUrl;
+                    },3000);
+                    window.location.href = downLoadUrl;
                 }
 
                 if (isAndroid) {
                     //android
-
-                    window.location.href = "weixin://";
-                    // var jumpUrl = "zhixueapp://com.iflytek.elpmobile.smartlearning/open?destination=homeworkList";
-                    // var d = new Date();
-                    // var t0 = d.getTime();
-                    // if(openApp(jumpUrl,t0)){
-                    //     openApp(jumpUrl,t0);
-                    // } else {
-                    //     //由于打开需要1～2秒，利用这个时间差来处理－－打开app后，返回h5页面会出现页面变成app下载页面，影响用户体验
-                    //     var delay = setInterval(function(){
-                    //         var d = new Date();
-                    //         var t1 = d.getTime();
-                    //         if( t1-t0<3000 && t1-t0>2000){
-                    //             $('a').attr('href', 'http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning');
-                    //         }
-                    //         if(t1-t0>=3000){
-                    //             clearInterval(delay);
-                    //         }
-                    //     },1000);
-                    // }
+                    var downLoadUrl = "http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning";
+                    var jumpUrl = "zhixueapp://com.iflytek.elpmobile.smartlearning/open?destination=homeworkList";
+                    setTimeout(function () {
+                        var ifr = document.createElement('iframe');
+                        ifr.src = jumpUrl;
+                        ifr.style.display = 'none';
+                        document.body.appendChild(ifr);
+                    },3000);
+                    $('a').attr('href', downLoadUrl);
                 }
             }
         });
-
-        function openApp(src,t0) {
-            // 通过iframe的方式试图打开APP，如果能正常打开，会直接切换到APP，并自动阻止a标签的默认行为
-            // 否则打开a标签的href链接
-            var ifr = document.createElement('iframe');
-            ifr.src = 'weixin://';
-            ifr.style.display = 'none';
-            document.body.appendChild(ifr);
-            // var delay = setInterval(function(){
-            //     var d = new Date();
-            //     var t1 = d.getTime();
-            //     if( t1-t0<3000 && t1-t0>2000){
-            //         $('a').attr('href', 'http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning');
-            //     }
-            //     if(t1-t0>=3000){
-            //         clearInterval(delay);
-            //     }
-            // },1000);
-            //
-            //
-            //
-            // window.setTimeout(function(){
-            //
-            //     alert('false');
-            // },2000);
-        }
     });
 </script>
 </body>
