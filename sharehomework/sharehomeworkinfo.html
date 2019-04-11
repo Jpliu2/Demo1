@@ -141,23 +141,26 @@
                     //ios
                     var downLoadUrl = "https://itunes.apple.com/cn/app/智学网-让学习更简单/id981030648?mt=8";
                     var jumpUrl = "zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=";
+                    window.location.href = jumpUrl;
                     setTimeout(function () {
-                        window.location.href = jumpUrl;
+                        window.location.href = downLoadUrl;
                     },3000);
-                    window.location.href = downLoadUrl;
+
                 }
 
                 if (isAndroid) {
                     //android
                     var downLoadUrl = "http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning";
                     var jumpUrl = "zhixueapp://com.iflytek.elpmobile.smartlearning/open?destination=homeworkList";
+                    var ifr = document.createElement('iframe');
+                    ifr.src = jumpUrl;
+                    ifr.style.display = 'none';
+                    document.body.appendChild(ifr);
                     setTimeout(function () {
-                        var ifr = document.createElement('iframe');
-                        ifr.src = jumpUrl;
-                        ifr.style.display = 'none';
-                        document.body.appendChild(ifr);
+                        document.body.document.body.removeChild(ifr);
+                        $('a').attr('href', downLoadUrl);
                     },3000);
-                    $('a').attr('href', downLoadUrl);
+
                 }
             }
         });
