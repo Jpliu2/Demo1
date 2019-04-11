@@ -147,9 +147,10 @@
                         }
                     }, 2000)
 
-                    var t1 = Date.now();
                     alert("安卓移动端1");
-                    $('a').attr('href','zhixueapp://com.iflytek.elpmobile.smartlearning/open?destination=homeworkList');
+                    $('a').attr('href','http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning');
+                    // $('a').attr('href','zhixueapp://com.iflytek.elpmobile.smartlearning/open?destination=homeworkList');
+                    var t1 = Date.now();
                     timeout = setTimeout(function () {
                         var t2 = Date.now();
                         if (!t1 || t2 - t1 < t + 100) {
