@@ -120,6 +120,9 @@
     $(function () {
         //监听程序时候进入后台
         document.addEventListener("visibilitychange",function(){
+            if(document.visibilityState=="visible"){
+                window.location.reload(true);
+            }
             if(document.visibilityState=="hidden"){
                 window.location.reload(true);
             }
@@ -140,7 +143,7 @@
                     window.location.href = "zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=";
                     setTimeout(function () {
                         window.location.href = "https://itunes.apple.com/cn/app/智学网-让学习更简单/id981030648?mt=8";
-                    },3000);
+                    },1000);
 
                 }
                 if (isAndroid) {
