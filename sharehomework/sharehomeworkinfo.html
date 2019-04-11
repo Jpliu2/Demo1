@@ -118,15 +118,6 @@
 <script src="js/index.js"></script>
 <script type="text/javascript">
     $(function () {
-        //监听程序时候进入后台
-        document.addEventListener("visibilitychange",function(){
-            if(document.visibilityState=="visible"){
-                window.location.reload(true);
-            }
-            if(document.visibilityState=="hidden"){
-                window.location.reload(true);
-            }
-        })
         //打开应用
         $('a').click(function () {
             var u = navigator.userAgent, app = navigator.appVersion;
@@ -143,7 +134,7 @@
                     window.location.href = "zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=";
                     setTimeout(function () {
                         window.location.href = "https://itunes.apple.com/cn/app/智学网-让学习更简单/id981030648?mt=8";
-                    },1000);
+                    },10);
 
                 }
                 if (isAndroid) {
@@ -152,8 +143,11 @@
                     ifr.src = "zhixueapp://com.iflytek.elpmobile.smartlearning/open?destination=homeworkList";
                     ifr.style.display = 'none';
                     document.body.appendChild(ifr);
-                    document.body.removeChild(ifr);
-                    $('a').attr('href','http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning');
+                    setTimeout(function () {
+                        document.body.removeChild(ifr);
+                        $('a').attr('href','http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning');
+                    },10);
+
                 }
             }
         });
