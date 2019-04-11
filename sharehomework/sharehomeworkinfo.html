@@ -121,10 +121,12 @@
         //监听程序时候进入后台
         document.addEventListener("visibilitychange",function(){
             if(document.visibilityState=="visible"){
+                alert('进入页面');
                 //进入页面
             }
             if(document.visibilityState=="hidden"){
                 //进入后台
+                alert('离开页面');
             }
         })
         //打开应用
