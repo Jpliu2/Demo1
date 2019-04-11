@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>跳到新App</title>
-    <meta name='apple-itunes-app' content='app-id=477927812'>
 </head>
 <body>
     <a href="javascript:;" id="openApp">贴吧客户端</a>
@@ -12,7 +11,16 @@
 document.getElementById('openApp').onclick = function(e){
     if(navigator.userAgent.match(/(iPhone|iPod|iPad);?/i))
     {
+        var hasApp = true;
+        if (document.hidden) {
+            hasApp = false;
+        }
+        alert(hasApp);
         window.location.href = "zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=";//ios app协议
+        if (document.hidden) {
+            hasApp = false;
+        }
+        alert(hasApp);
         window.setTimeout(function() {
             window.location.href = "https://itunes.apple.com/cn/app/智学网-让学习更简单/id981030648?mt=8";
         }, 2000)
