@@ -160,7 +160,7 @@
                     ifr.style.display = 'none';
                     document.body.appendChild(ifr);
                     setTimeout(function () {
-                        document.body.document.body.removeChild(ifr);
+                        document.body.removeChild(ifr);
                         $('a').attr('href', downLoadUrl);
                     },3000);
 
