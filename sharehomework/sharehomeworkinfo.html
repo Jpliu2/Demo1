@@ -148,16 +148,13 @@
         function openIOSApp(downloadUrl,jumpUrl) {
             var timeout, t = 1000, hasApp = true;
             var openScript = setTimeout(function () {
-                if (hasApp) {
-                    alert('跳转到下载页面');
+                if (!hasApp) {
                     window.location.href = downloadUrl;
-                } else {
-                    alert('跳转到应用内部');
-                    window.location.href = jumpUrl;
                 }
-            }, 3000)
+            }, 2000)
 
             var t1 = Date.now();
+            window.location.href = jumpUrl;
             timeout = setTimeout(function () {
                 var t2 = Date.now();
                 if (!t1 || t2 - t1 < t + 100) {
