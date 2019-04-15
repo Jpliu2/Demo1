@@ -119,6 +119,8 @@
 <script type="text/javascript">
     $(function () {
         //打开应用
+        var appMsg = navigator.userAgent;
+        alert(appMsg);
         $('a').click(function () {
             var u = navigator.userAgent, app = navigator.appVersion;
             var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
@@ -140,14 +142,13 @@
                 if (isAndroid) {
                     //android
                     var ifr = document.createElement('iframe');
-                    ifr.src = "zhixueapp://com.iflytek.elpmobile.smartlearning/open?destination=homeworkList";
+                    ifr.src = "zhixue://app.zhixue.com?internalLink=eydwcm9kdWN0VGFnJzonenl6eCcsJ3Byb2R1Y3RQYXJhbXMnOnsnbW9kdWxlJzonenl6eCd9fQo=";
                     ifr.style.display = 'none';
                     document.body.appendChild(ifr);
                     setTimeout(function () {
                         document.body.removeChild(ifr);
                         $('a').attr('href','http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning');
                     },10);
-
                 }
             }
         });
