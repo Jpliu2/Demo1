@@ -147,11 +147,11 @@
     $(function () {
         //打开应用
         $('a').click(function () {
-            var u = navigator.userAgent, app = navigator.appVersion;
-            var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
-            var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
-            var isiPad = !!u.match(/iPad/i);//ipad终端
-            if(u.toLowerCase().match(/MicroMessenger/i) == 'micromessenger'){
+            var userAgent = navigator.userAgent, appVersion = navigator.appVersion;
+            var isAndroid = userAgent.indexOf('Android') > -1 || userAgent.indexOf('Linux') > -1; //android终端或者uc浏览器
+            var isiOS = !!userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+            var isiPad = !!userAgent.match(/iPad/i);//ipad终端
+            if(userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger'){
                 document.body.addEventListener('touchmove', function (e) {
                     e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
                 }, {passive: false});
@@ -159,18 +159,18 @@
             } else {
                 if (isiOS){
                     // //ios
-                    // if (isiPad) {
-                    //     //iPad
-                    //     window.location.href = "zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=";
-                    //     setTimeout(function () {
-                    //         window.location.href = "https://itunes.apple.com/cn/app/智学网-让学习更简单/id981030648?mt=8";
-                    //     },10);
-                    // } else {
-                    //     $('a').attr('href','zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=');
-                    //     setTimeout(function () {
-                    //         $('a').attr('href','https://itunes.apple.com/cn/app/智学网-让学习更简单/id981030648?mt=8');
-                    //     },10);
-                    // }
+                    if (isiPad) {
+                        //iPad
+                        window.location.href = "zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=";
+                        setTimeout(function () {
+                            window.location.href = "https://itunes.apple.com/cn/app/智学网-让学习更简单/id981030648?mt=8";
+                        },10);
+                    } else {
+                        $('a').attr('href','zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=');
+                        setTimeout(function () {
+                            $('a').attr('href','https://itunes.apple.com/cn/app/智学网-让学习更简单/id981030648?mt=8');
+                        },10);
+                    }
                     // $('a').attr('href','zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=');
                     // setTimeout(function () {
                     //     $('a').attr('href','https://itunes.apple.com/cn/app/智学网-让学习更简单/id981030648?mt=8');
@@ -179,11 +179,11 @@
                     // ifr.src = "zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=";
                     // ifr.style.display = 'none';
                     // document.body.appendChild(ifr);
-                    $('a').attr('href','zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=');
-                    setTimeout(function () {
-                        // document.body.removeChild(ifr);
-                        $('a').attr('href','https://itunes.apple.com/cn/app/智学网-让学习更简单/id981030648?mt=8');
-                    },10);
+                    // $('a').attr('href','zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=');
+                    // setTimeout(function () {
+                    //     // document.body.removeChild(ifr);
+                    //     $('a').attr('href','https://itunes.apple.com/cn/app/智学网-让学习更简单/id981030648?mt=8');
+                    // },10);
                 }
                 if (isAndroid) {
                     //android
