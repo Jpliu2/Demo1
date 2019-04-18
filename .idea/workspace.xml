@@ -18,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sharehomework/sharehomeworkinfo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="120" column="47" selection-start-line="120" selection-start-column="47" selection-end-line="120" selection-end-column="47" />
+            <state relative-caret-position="307">
+              <caret line="168" column="51" selection-start-line="168" selection-start-column="51" selection-end-line="168" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -68,8 +68,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-2" />
-    <option name="y" value="25" />
+    <option name="x" value="5" />
+    <option name="y" value="122" />
     <option name="width" value="1412" />
     <option name="height" value="877" />
   </component>
@@ -135,15 +135,15 @@
       <option name="presentableId" value="Default" />
       <updated>1555491038966</updated>
       <workItem from="1555491040267" duration="485000" />
-      <workItem from="1555548281548" duration="8761000" />
+      <workItem from="1555548281548" duration="8961000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9246000" />
+    <option name="totallyTimeSpent" value="9446000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2" y="25" width="1412" height="877" extended-state="0" />
+    <frame x="5" y="122" width="1412" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18979152" />
@@ -201,8 +201,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sharehomework/sharehomeworkinfo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="120" column="47" selection-start-line="120" selection-start-column="47" selection-end-line="120" selection-end-column="47" />
+        <state relative-caret-position="307">
+          <caret line="168" column="51" selection-start-line="168" selection-start-column="51" selection-end-line="168" selection-end-column="51" />
         </state>
       </provider>
     </entry>
