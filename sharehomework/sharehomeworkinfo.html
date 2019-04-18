@@ -166,19 +166,16 @@
                             window.location.href = "https://itunes.apple.com/cn/app/智学网-让学习更简单/id981030648?mt=8";
                         },10);
                     } else {
-                        alert("gdsfdg");
                         if (userAgent.match(/QQ/i) == "qq") {
-                            alert("是QQ内置浏览器");
                             $('a').attr('href','zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=');
                             setTimeout(function () {
                                 window.location.href = "https://itunes.apple.com/cn/app/智学网-让学习更简单/id981030648?mt=8";
                             },10);
                         } else {
-                            alert("是iphone浏览器");
                             window.location.href = "zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=";
                             setTimeout(function () {
                                 $('a').attr('href','https://itunes.apple.com/cn/app/智学网-让学习更简单/id981030648?mt=8');
-                            },10);
+                            },1000);
                         }
 
                     }
