@@ -171,10 +171,18 @@
                     //         $('a').attr('href','https://itunes.apple.com/cn/app/智学网-让学习更简单/id981030648?mt=8');
                     //     },10);
                     // }
-                    $('a').attr('href','zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=');
+                    // $('a').attr('href','zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=');
+                    // setTimeout(function () {
+                    //     $('a').attr('href','https://itunes.apple.com/cn/app/智学网-让学习更简单/id981030648?mt=8');
+                    // },1000);
+                    var ifr = document.createElement('iframe');
+                    ifr.src = "zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=";
+                    ifr.style.display = 'none';
+                    document.body.appendChild(ifr);
                     setTimeout(function () {
+                        document.body.removeChild(ifr);
                         $('a').attr('href','https://itunes.apple.com/cn/app/智学网-让学习更简单/id981030648?mt=8');
-                    },1000);
+                    },10);
                 }
                 if (isAndroid) {
                     //android
@@ -185,7 +193,7 @@
                     setTimeout(function () {
                         document.body.removeChild(ifr);
                         $('a').attr('href','http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning');
-                    },6000);
+                    },10);
                 }
             }
         });
