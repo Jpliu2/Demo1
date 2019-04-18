@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="160bc6e7-4a3b-412d-9ee7-8f78968deac6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/sharehomework/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/sharehomework/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sharehomework/sharehomeworkinfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/sharehomework/sharehomeworkinfo.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -15,20 +15,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sharehomework/sharehomeworkinfo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="107" column="73" lean-forward="true" selection-start-line="107" selection-start-column="73" selection-end-line="107" selection-end-column="73" />
+            <state relative-caret-position="199">
+              <caret line="94" column="53" selection-start-line="94" selection-start-column="53" selection-end-line="94" selection-end-column="53" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sharehomework/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="230" column="37" selection-start-line="230" selection-start-column="37" selection-end-line="230" selection-end-column="37" />
+            <state relative-caret-position="200">
+              <caret line="234" column="20" lean-forward="true" selection-start-line="234" selection-start-column="20" selection-end-line="234" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -42,6 +42,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/sharehomework/css/index.css" />
+        <option value="$PROJECT_DIR$/sharehomework/sharehomeworkinfo.html" />
       </list>
     </option>
   </component>
@@ -113,12 +114,12 @@
       <option name="presentableId" value="Default" />
       <updated>1555491038966</updated>
       <workItem from="1555491040267" duration="485000" />
-      <workItem from="1555548281548" duration="1352000" />
+      <workItem from="1555548281548" duration="1473000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1837000" />
+    <option name="totallyTimeSpent" value="1958000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="8" y="23" width="1403" height="877" extended-state="0" />
@@ -161,17 +162,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sharehomework/sharehomeworkinfo.html">
+    <entry file="file://$PROJECT_DIR$/sharehomework/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="107" column="73" lean-forward="true" selection-start-line="107" selection-start-column="73" selection-end-line="107" selection-end-column="73" />
+        <state relative-caret-position="200">
+          <caret line="234" column="20" lean-forward="true" selection-start-line="234" selection-start-column="20" selection-end-line="234" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sharehomework/css/index.css">
+    <entry file="file://$PROJECT_DIR$/sharehomework/sharehomeworkinfo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="230" column="37" selection-start-line="230" selection-start-column="37" selection-end-line="230" selection-end-column="37" />
+        <state relative-caret-position="199">
+          <caret line="94" column="53" selection-start-line="94" selection-start-column="53" selection-end-line="94" selection-end-column="53" />
         </state>
       </provider>
     </entry>
