@@ -227,7 +227,7 @@ div,img,span,label {
 /*底部按钮*/
 #share_bottom {
     background-color: white;
-    position: fixed;
+    /*position: fixed;*/
     bottom: 0;
     height: 54px;
     width: 100%;
