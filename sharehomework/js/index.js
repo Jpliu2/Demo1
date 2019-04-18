@@ -9,6 +9,11 @@ var app = new Vue({
         hwEndTime: '', //结束时间
         isRepeal: null, //作业是否撤销
         isTestApi: null,//网络请求
+        gradeCode: '',//年级code
+        phaseCode: '',//学段code
+        subjectCode: '',//学科code
+        equipmentName: '',//设备名称
+        errMsg: 'error',//数据或网络异常时埋点所传数据
         isRequestSuccess:null,//网络请求是否成功
         tipText: '',//缺省文字
         tipImageSrc: ''//缺省图片
@@ -41,20 +46,25 @@ var app = new Vue({
                     that.hwStartTime = that.format(_data.hwStartTime)
                     that.hwEndTime = that.format(_data.hwEndTime)
                     that.isRepeal = _data.isRepeal
+                    that.gradeCode = _data.gradeCode
+                    that.phaseCode = _data.phaseCode
+                    that.subjectCode = _data.subjectCode
+                    that.buryingPoint()
                 } else {
+                    //数据获取异常
                     that.isRequestSuccess = false
                     console.log(data)
-                    document.title = '你是什么人11111'
                     that.tipText = '加载失败，请稍后重试～'
                     that.tipImageSrc = './image/share_noData_error@2x.png'
+                    that.buryingPoint()
                 }
             },
             error: function(err) {
                 //判断是否没有网络
-                this.isRequestSuccess = false
-                document.title = "你是什么人。。。。"
+                that.isRequestSuccess = false
                 that.tipText = '无法连接至网络哦～'
                 that.tipImageSrc = './image/share_network_error@2x.png'
+                that.buryingPoint()
             }
         }).then(function(res) {
             //其它情况
@@ -62,6 +72,7 @@ var app = new Vue({
     },
     methods: {
         // 从url上截取参数对象
+        //从url上截取参数对象
         getQueryObject: function(url) {
             url = url == null ? window.location.href : url
             var search = url.substring(url.lastIndexOf('?') + 1) //截取到所有参数键值对
@@ -96,7 +107,6 @@ var app = new Vue({
                 )
             }
         },
-
         // 根据url切换测试、现网环境
         switchContext: function() {
             var url = window.location.href
@@ -104,6 +114,33 @@ var app = new Vue({
             var flag = a.indexOf('mhwtest.zhixue.com') != -1
             if (flag) {
                 this.isTestApi = true
+            }
+        },
+        //点击打开app按钮
+        // openApp: function() {
+        //     console.log(this.equipmentName)
+        //     console.log("打开app")
+        //     var u = navigator.userAgent, app = navigator.appVersion
+        //     var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1
+        //     var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)
+        // },
+        //进行数据埋点
+        buryingPoint: function () {
+            console.log(this.isRequestSuccess)
+            this.getEquipmentName(this.getQueryObject().type)
+            console.log(this.equipmentName)
+            if (this.isRequestSuccess) {
+                console.log("数据获取成功")
+            } else {
+                console.log("数据获取异常")
+            }
+        },
+        //判断设备名称
+        getEquipmentName: function (type) {
+            if (type == 5||type == 6||type == 7||type == 8) {
+                this.equipmentName = 'app'
+            } else {
+                this.equipmentName = 'web'
             }
         }
     }
