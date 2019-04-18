@@ -18,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sharehomework/sharehomeworkinfo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
-              <caret line="183" column="103" selection-start-line="183" selection-start-column="103" selection-end-line="183" selection-end-column="103" />
+            <state relative-caret-position="460">
+              <caret line="181" column="220" selection-start-line="181" selection-start-column="220" selection-end-line="181" selection-end-column="220" />
             </state>
           </provider>
         </entry>
@@ -115,12 +115,12 @@
       <option name="presentableId" value="Default" />
       <updated>1555491038966</updated>
       <workItem from="1555491040267" duration="485000" />
-      <workItem from="1555548281548" duration="6516000" />
+      <workItem from="1555548281548" duration="6619000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7001000" />
+    <option name="totallyTimeSpent" value="7104000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="28" y="23" width="1412" height="877" extended-state="6" />
@@ -172,8 +172,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sharehomework/sharehomeworkinfo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="183" column="103" selection-start-line="183" selection-start-column="103" selection-end-line="183" selection-end-column="103" />
+        <state relative-caret-position="460">
+          <caret line="181" column="220" selection-start-line="181" selection-start-column="220" selection-end-line="181" selection-end-column="220" />
         </state>
       </provider>
     </entry>
