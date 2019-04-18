@@ -143,41 +143,43 @@
 </div>
 <script src="js/vue.js"></script>
 <script src="js/index.js"></script>
-<script >
-$(function () {
-//打开应用
-$('a').click(function () {
-var u = navigator.userAgent, app = navigator.appVersion;
-var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
-var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
-if(u.toLowerCase().match(/MicroMessenger/i) == 'micromessenger'){
-document.body.addEventListener('touchmove', function (e) {
-e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
-}, {passive: false});
-$('#coverBackview').css('display','block');
-} else {
-if (isiOS){
-//ios
-window.location.href = "zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=";
-setTimeout(function () {
-window.location.href = "https://itunes.apple.com/cn/app/智学网-让学习更简单/id981030648?mt=8";
-},1);
+<script type="text/javascript">
+    $(function () {
+        //打开应用
+        $('a').click(function () {
+            var u = navigator.userAgent, app = navigator.appVersion;
+            var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
+            var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+            if(u.toLowerCase().match(/MicroMessenger/i) == 'micromessenger'){
+                document.body.addEventListener('touchmove', function (e) {
+                    e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
+                }, {passive: false});
+                $('#coverBackview').css('display','block');
+            } else {
+                if (isiOS){
+                    //ios
+                    window.location.href = "zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=";
+                    setTimeout(function () {
+                        window.location.href = "https://itunes.apple.com/cn/app/智学网-让学习更简单/id981030648?mt=8";
+                    },10);
 
-}
-if (isAndroid) {
-//android
-var ifr = document.createElement('iframe');
-ifr.src = "zhixue://app.zhixue.com?internalLink=eydwcm9kdWN0VGFnJzonenl6eCcsJ3Byb2R1Y3RQYXJhbXMnOnsnbW9kdWxlJzonenl6eCd9fQo=";
-ifr.style.display = 'none';
-document.body.appendChild(ifr);
-setTimeout(function () {
-document.body.removeChild(ifr);
-$('a').attr('href','http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning');
-},1);
-}
-}
-});
-});
+                }
+                if (isAndroid) {
+                    //android
+                    var ifr = document.createElement('iframe');
+                    ifr.src = "zhixue://app.zhixue.com?internalLink=eydwcm9kdWN0VGFnJzonenl6eCcsJ3Byb2R1Y3RQYXJhbXMnOnsnbW9kdWxlJzonenl6eCd9fQo=";
+                    ifr.style.display = 'none';
+                    document.body.appendChild(ifr);
+                    setTimeout(function () {
+                        document.body.removeChild(ifr);
+                        $('a').attr('href','http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning');
+                    },10);
+
+                }
+            }
+        });
+    });
 </script>
+
 </body>
 </html>
