@@ -18,6 +18,7 @@
     <title>练习通知</title>
     <link rel="icon" href="data:;base64,="/>
     <script src="js/jquery.js"></script>
+    <script src="js/index.umd.js"></script>
     <style>
         [v-cloak] {
             display: none;
@@ -117,7 +118,7 @@
                 <span class="step_span_tip">第二步：使用学生智学网账号密码登录；</span>
             </div>
             <div class="step_div_tip">
-                <span class="step_span_tip">第fdsdfwd步：在首页点击“练习中心”查看练习。</span>
+                <span class="step_span_tip">第三步：在首页点击“练习中心”查看练习。</span>
             </div>
         </div>
         <!--空白容器-->
@@ -141,26 +142,18 @@
 </div>
 <script src="js/vue.js"></script>
 <script src="js/index.js"></script>
-<script src="js/index.umd.js"></script>
 <script type="text/javascript">
     $(function () {
-        //打开应用
+        var leaveApp = false;
+        document.addEventListener('visibilitychange', function() {
+            if(document.hidden){ //页面不可见状态
+                leaveApp = true;
+            } else { //页面可见状态
+                leaveApp = false;
+            }
+        });
         $('a').click(function () {
-            alert("click");
-            const options = {
-                scheme: {
-                    protocol:'weixin://',//和安卓ios统一的，openapp表示唤起，安卓ios配openapp之前的zihexin://
-                },
-                intent: {
-                    package: '',
-                    scheme: '',
-                },
-                timeout: 3000,
-                appstore: 'https://itunes.apple.com/cn/app/zi-he-xin/id581817870?mt=8',//appstore地址
-                yingyongbao: 'https://a.app.qq.com/o/simple.jsp?pkgname=com.zihexin',//应用宝地址
-                fallback: 'https://a.app.qq.com/o/simple.jsp?pkgname=com.zihexin',//唤起应用失败，未安装时跳转到应用宝地址
-            };
-            const callLib = new CallApp(options);
+            location.href = 'zhixue://app.zhixue.com?internalLink=eydwcm9kdWN0VGFnJzonenl6eCcsJ3Byb2R1Y3RQYXJhbXMnOnsnbW9kdWxlJzonenl6eCd9fQo=';
         });
     });
 </script>
