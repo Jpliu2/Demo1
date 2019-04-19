@@ -117,7 +117,7 @@
                 <span class="step_span_tip">第二步：使用学生智学网账号密码登录；</span>
             </div>
             <div class="step_div_tip">
-                <span class="step_span_tip">第fd过电饭锅的步：在首页点击“练习中心”查看练习。</span>
+                <span class="step_span_tip">第fd、的步：在首页点击“练习中心”查看练习。</span>
             </div>
         </div>
         <!--空白容器-->
@@ -199,20 +199,43 @@
                 }
                 if (isAndroid) {
                     //android
-                    var ifr = document.createElement('iframe');
-                    ifr.src = "zhixue://app.zhixue.com?internalLink=eydwcm9kdWN0VGFnJzonenl6eCcsJ3Byb2R1Y3RQYXJhbXMnOnsnbW9kdWxlJzonenl6eCd9fQo=";
-                    ifr.style.display = 'none';
-                    document.body.appendChild(ifr);
-                    alert("已安装app");
-                    var openTime =+ new Date();
-                    setTimeout(function () {
-                        document.body.removeChild(ifr);
-                        $('a').attr('href','http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning');
-                        alert("没有安装app");
-                    },10);
-                    // if (isHaveApp) {
+                    var isBlur = false;//通过窗口焦点进行判断
+                    location.href = 'zhixue://app.zhixue.com?internalLink=eydwcm9kdWN0VGFnJzonenl6eCcsJ3Byb2R1Y3RQYXJhbXMnOnsnbW9kdWxlJzonenl6eCd9fQo=';
+                    setTimeout(function() {
+                        if (!isBlur) {
+                            location.href = 'http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning';
+                        }
+                    }, 1000);
+                    window.onblur  = function() {
+                        console.log('失去焦点');
+                        isBlur = true;
+                    };
+                    var hiddenProperty = 'hidden' in document ? 'hidden' :
+                        'webkitHidden' in document ? 'webkitHidden' :
+                            'mozHidden' in document ? 'mozHidden' :
+                                null;
+                    var visibilityChangeEvent = hiddenProperty.replace(/hidden/i, 'visibilitychange');
+                    var onVisibilityChange = function() {
+                        if (document[hiddenProperty]) {
+                            console.log('失去焦點');
+                            isBlur = true;
+                        }
+                    }
+                    document.addEventListener(visibilityChangeEvent, onVisibilityChange);
+                    // var ifr = document.createElement('iframe');
+                    // ifr.src = "zhixue://app.zhixue.com?internalLink=eydwcm9kdWN0VGFnJzonenl6eCcsJ3Byb2R1Y3RQYXJhbXMnOnsnbW9kdWxlJzonenl6eCd9fQo=";
+                    // ifr.style.display = 'none';
+                    // document.body.appendChild(ifr);
+                    // alert("已安装app");
+                    // var openTime =+ new Date();
+                    // setTimeout(function () {
+                    //     document.body.removeChild(ifr);
                     //     $('a').attr('href','http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning');
-                    // }
+                    //     alert("没有安装app");
+                    // },10);
+                    // // if (isHaveApp) {
+                    // //     $('a').attr('href','http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning');
+                    // // }
                 }
             }
         });
