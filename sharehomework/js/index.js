@@ -117,13 +117,13 @@ var app = new Vue({
             }
         },
         //点击打开app按钮
-        // openApp: function() {
-        //     console.log(this.equipmentName)
-        //     console.log("打开app")
-        //     var u = navigator.userAgent, app = navigator.appVersion
-        //     var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1
-        //     var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)
-        // },
+        openApp: function() {
+            if(userAgent.toLowerCase().match(/MicroMessenger/i) != 'micromessenger'){
+                console.log(this.equipmentName)
+                console.log("打开app")
+                alert("打开app")
+            }
+        },
         //进行数据埋点
         buryingPoint: function () {
             console.log(this.isRequestSuccess)
