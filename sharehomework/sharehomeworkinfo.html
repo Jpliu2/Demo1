@@ -18,7 +18,6 @@
     <title>练习通知</title>
     <link rel="icon" href="data:;base64,="/>
     <script src="js/jquery.js"></script>
-    <script src="js/index.umd.js"></script>
     <style>
         [v-cloak] {
             display: none;
@@ -142,10 +141,12 @@
 </div>
 <script src="js/vue.js"></script>
 <script src="js/index.js"></script>
+<script src="js/index.umd.js"></script>
 <script type="text/javascript">
     $(function () {
         //打开应用
         $('a').click(function () {
+            alert("click");
             const options = {
                 scheme: {
                     protocol:'weixin://',//和安卓ios统一的，openapp表示唤起，安卓ios配openapp之前的zihexin://
