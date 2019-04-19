@@ -151,6 +151,7 @@
             var isiOS = !!userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
             var isiPad = !!userAgent.match(/iPad/i);//ipad终端
             if(userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger'){
+                alert("先打开app");
                 document.body.addEventListener('touchmove', function (e) {
                     e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
                 }, {passive: false});

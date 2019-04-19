@@ -118,7 +118,7 @@ var app = new Vue({
         },
         //点击打开app按钮
         openApp: function() {
-            if(userAgent.toLowerCase().match(/MicroMessenger/i) != 'micromessenger'){
+            if(navigator.userAgent.toLowerCase().match(/MicroMessenger/i) != 'micromessenger'){
                 console.log(this.equipmentName)
                 console.log("打开app")
                 alert("打开app")
