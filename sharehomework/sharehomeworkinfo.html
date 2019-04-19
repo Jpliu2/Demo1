@@ -201,11 +201,6 @@
                     //android
                     var isBlur = false;//通过窗口焦点进行判断
                     location.href = 'zhixue://app.zhixue.com?internalLink=eydwcm9kdWN0VGFnJzonenl6eCcsJ3Byb2R1Y3RQYXJhbXMnOnsnbW9kdWxlJzonenl6eCd9fQo=';
-                    setTimeout(function() {
-                        if (!isBlur) {
-                            location.href = 'http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning';
-                        }
-                    }, 1000);
                     window.onblur  = function() {
                         console.log('失去焦点');
                         isBlur = true;
@@ -217,11 +212,16 @@
                     var visibilityChangeEvent = hiddenProperty.replace(/hidden/i, 'visibilitychange');
                     var onVisibilityChange = function() {
                         if (document[hiddenProperty]) {
-                            console.log('失去焦點');
+                            console.log('失去焦点');
                             isBlur = true;
                         }
                     }
                     document.addEventListener(visibilityChangeEvent, onVisibilityChange);
+                    setTimeout(function() {
+                        if (!isBlur) {
+                            location.href = 'http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning';
+                        }
+                    }, 1000);
                     // var ifr = document.createElement('iframe');
                     // ifr.src = "zhixue://app.zhixue.com?internalLink=eydwcm9kdWN0VGFnJzonenl6eCcsJ3Byb2R1Y3RQYXJhbXMnOnsnbW9kdWxlJzonenl6eCd9fQo=";
                     // ifr.style.display = 'none';
