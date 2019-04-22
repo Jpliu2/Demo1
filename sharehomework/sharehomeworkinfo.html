@@ -121,7 +121,7 @@
                 <span class="step_span_tip">第二步：使用学生智学网账号密码登录；</span>
             </div>
             <div class="step_div_tip">
-                <span class="step_span_tip">第三是否步：在首页点击“练习中心”查看练习。</span>
+                <span class="step_span_tip">第三步：在首页点击“练习中心”查看练习。</span>
             </div>
         </div>
         <!--空白容器-->
@@ -150,10 +150,7 @@
         var userAgent = navigator.userAgent, appVersion = navigator.appVersion;
         var isiOS = !!userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
         var isWeiXin = (userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger');
-        var isFirstReload = true;
-        alert("不是QQ弹框");
         if (!isWeiXin) {
-            alert("不是QQ弹框");
             openApp();
             isFirstReload = false;
         }
@@ -186,18 +183,7 @@
                 alert('打开IOSApp');
                 window.location.href = "zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=";
             } else {
-                if (isFirstReload) {
-                    //第一次打开应用
-                    alert("第一次打开应用");
-                    var ifr = document.createElement('iframe');
-                    ifr.src = "zhixue://app.zhixue.com?internalLink=eydwcm9kdWN0VGFnJzonenl6eCcsJ3Byb2R1Y3RQYXJhbXMnOnsnbW9kdWxlJzonenl6eCd9fQo=";
-                    ifr.style.display = 'none';
-                    document.body.appendChild(ifr);
-                    document.body.removeChild(ifr);
-                } else {
-                    alert('再次打开应用');
-                    $('#clickApp').attr('href', 'zhixue://app.zhixue.com?internalLink=eydwcm9kdWN0VGFnJzonenl6eCcsJ3Byb2R1Y3RQYXJhbXMnOnsnbW9kdWxlJzonenl6eCd9fQo=');
-                }
+                window.location.href = "zhixue://app.zhixue.com?internalLink=eydwcm9kdWN0VGFnJzonenl6eCcsJ3Byb2R1Y3RQYXJhbXMnOnsnbW9kdWxlJzonenl6eCd9fQo=";
             }
         }
 
