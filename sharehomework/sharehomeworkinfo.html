@@ -188,7 +188,9 @@
                     window.location.href = "zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=";
                 } else {
                     //QQ中不能打开
+                    alert(userAgent);
                     if (isQQ) {
+                        alert('是QQ');
                         document.body.addEventListener('touchmove', function (e) {
                             e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
                         }, {passive: false});
