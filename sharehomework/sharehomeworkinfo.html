@@ -182,7 +182,8 @@
         function openApp() {
             if (isiOS) {
                 alert('打开IOSApp');
-                window.location.href = "zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=";
+                // window.location.href = "zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=";
+                $('#clickApp').attr('href','https://www.baidu.com');
                 // alert("下载app");
                 // window.location.href = "https://itunes.apple.com/cn/app/智学网-让学习更简单/id981030648?mt=8";
             } else {
@@ -190,13 +191,14 @@
                 // window.location.href = "zhixue://app.zhixue.com?internalLink=eydwcm9kdWN0VGFnJzonenl6eCcsJ3Byb2R1Y3RQYXJhbXMnOnsnbW9kdWxlJzonenl6eCd9fQo=";
             //     alert("下载android");
             //     window.location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning";
-                var ifr = document.createElement('iframe');
-                ifr.src = 'zhixue://app.zhixue.com?internalLink=eydwcm9kdWN0VGFnJzonenl6eCcsJ3Byb2R1Y3RQYXJhbXMnOnsnbW9kdWxlJzonenl6eCd9fQo=';
-                ifr.style.display = 'none';
-                document.body.appendChild(ifr);
-                window.setTimeout(function(){
-                    document.body.removeChild(ifr);
-                },2000)
+            //     var ifr = document.createElement('iframe');
+            //     ifr.src = 'zhixue://app.zhixue.com?internalLink=eydwcm9kdWN0VGFnJzonenl6eCcsJ3Byb2R1Y3RQYXJhbXMnOnsnbW9kdWxlJzonenl6eCd9fQo=';
+            //     ifr.style.display = 'none';
+            //     document.body.appendChild(ifr);
+            //     window.setTimeout(function(){
+            //         document.body.removeChild(ifr);
+            //     },2000)
+                $('#downloadApp').attr('href','http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning');
             }
         }
 
