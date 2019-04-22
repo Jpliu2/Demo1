@@ -162,7 +162,6 @@
                 }, {passive: false});
                 $('#coverBackview').css('display','block');
             } else {
-                document.body.removeChild(ifr);
                 openApp();
             }
         });
@@ -187,6 +186,7 @@
                 ifr.src = "zhixue://app.zhixue.com?internalLink=eydwcm9kdWN0VGFnJzonenl6eCcsJ3Byb2R1Y3RQYXJhbXMnOnsnbW9kdWxlJzonenl6eCd9fQo=";
                 ifr.style.display = 'none';
                 document.body.appendChild(ifr);
+                document.body.removeChild(ifr);
             }
         }
 
