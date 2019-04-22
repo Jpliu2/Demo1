@@ -116,11 +116,11 @@ var app = new Vue({
         },
         //点击下载app按钮
         downApp: function() {
-            this.openOrDownloadApp(30081002)
+            this.openOrDownloadApp(30081003)
         },
         //点击打开app按钮
         openApp: function() {
-            this.openOrDownloadApp(30081003)
+            this.openOrDownloadApp(30081002)
         },
         //进行下载或者打开app的埋点操作
         openOrDownloadApp: function(eventId) {
@@ -175,6 +175,7 @@ var app = new Vue({
                     })
                 }
             }
+            this.openOrDownloadApp(30081002)
         },
         //判断设备名称
         getEquipmentName: function (type) {
