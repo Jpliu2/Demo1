@@ -126,10 +126,10 @@ var app = new Vue({
         openOrDownloadApp: function(eventId) {
             var userAgent = navigator.userAgent
             var isiOS = !!userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)  //ios终端
-            var isiPad = !!userAgent.match(/iPad/i)                         //ipad终端
             var isWeiXin = (userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger');
             var isIOSQQ = (isiOS && / QQ/i.test(userAgent))
             if(!(isWeiXin||isIOSQQ)){
+                alert("埋点")
                 this.getEquipmentName(this.getQueryObject().type)//获取设备名称
                 if (typeof IFlyCollector !== 'undefined') {
                     if (this.isRequestSuccess) {
@@ -154,6 +154,7 @@ var app = new Vue({
         //进行数据埋点
         buryingPoint: function () {
             this.getEquipmentName(this.getQueryObject().type)//获取设备名称
+            this.openOrDownloadApp(30081002)
             if (typeof IFlyCollector !== 'undefined') {
                 if (this.isRequestSuccess) {
                     IFlyCollector.onEvent('3008',null,'30081001',null,{
@@ -174,7 +175,6 @@ var app = new Vue({
                     })
                 }
             }
-            this.openOrDownloadApp(30081002)
         },
         //判断设备名称
         getEquipmentName: function (type) {
