@@ -130,7 +130,6 @@ var app = new Vue({
             var isWeiXin = (userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger');
             var isIOSQQ = (isiOS && / QQ/i.test(userAgent))
             if(!(isWeiXin||isIOSQQ)){
-                alert("埋点")
                 this.getEquipmentName(this.getQueryObject().type)//获取设备名称
                 if (typeof IFlyCollector !== 'undefined') {
                     if (this.isRequestSuccess) {
