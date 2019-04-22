@@ -65,7 +65,7 @@
     <img id="share_rightIcon" src="./image/share_rightIcon@2x.png" alt=""/>
     <!--作业内容-->
     <div id="backview">
-        <div>
+        <div id="share_downloadApp">
 
         </div>
         <div id="share_hworkInfo" v-if="isRequestSuccess">
@@ -156,13 +156,13 @@
         }
         //点击打开应用
         $('#clickApp').click(function () {
-            alert('打开应用')
             if (isWeiXin) {
                 document.body.addEventListener('touchmove', function (e) {
                     e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
                 }, {passive: false});
                 $('#coverBackview').css('display','block');
             } else {
+                document.body.removeChild(ifr);
                 openApp();
             }
         });
@@ -187,7 +187,6 @@
                 ifr.src = "zhixue://app.zhixue.com?internalLink=eydwcm9kdWN0VGFnJzonenl6eCcsJ3Byb2R1Y3RQYXJhbXMnOnsnbW9kdWxlJzonenl6eCd9fQo=";
                 ifr.style.display = 'none';
                 document.body.appendChild(ifr);
-                document.body.removeChild(ifr);
             }
         }
 

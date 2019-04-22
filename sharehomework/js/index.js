@@ -13,7 +13,6 @@ var app = new Vue({
         phaseCode: '',//学段code
         subjectCode: '',//学科code
         equipmentName: '',//设备名称
-        errMsg: 'error',//数据或网络异常时埋点所传数据
         isRequestSuccess:false,//网络请求是否成功（默认不成功，请求完成后进行修改）
         tipText: '',//缺省文字
         tipImageSrc: ''//缺省图片
@@ -116,55 +115,61 @@ var app = new Vue({
                 this.isTestApi = true
             }
         },
+        //点击下载app按钮
+        downloadApp: function() {
+            this.openOrDownloadApp()
+        },
         //点击打开app按钮
         openApp: function() {
+            this.openOrDownloadApp()
+        },
+        //进行下载或者打开app的埋点操作
+        openOrDownloadApp: function() {
             if(navigator.userAgent.toLowerCase().match(/MicroMessenger/i) != 'micromessenger'){
-                // this.getEquipmentName(this.getQueryObject().type)//获取设备名称
-                // if (typeof IFlyCollector !== 'undefined') {
-                //     if (this.isRequestSuccess) {
-                //         IFlyCollector.onEvent('3008',null,'30081002',null,{
-                //             hwid: this.getQueryObject().hwId,
-                //             phase: this.phaseCode,
-                //             grade: this.gradeCode,
-                //             subject: this.subjectCode,
-                //             time: new Date(),
-                //             equipment: this.equipmentName
-                //         })
-                //     } else {
-                //         IFlyCollector.onEvent('3008',null,'30081002',null,{
-                //             hwid: this.getQueryObject().hwId,
-                //             error: this.errMsg,
-                //             time: new Date(),
-                //             equipment: this.equipmentName
-                //         })
-                //     }
-                // }
+                this.getEquipmentName(this.getQueryObject().type)//获取设备名称
+                if (typeof IFlyCollector !== 'undefined') {
+                    if (this.isRequestSuccess) {
+                        IFlyCollector.onEvent('3008',null,'30081002',null,{
+                            hwid: this.getQueryObject().hwId,
+                            phase: this.phaseCode,
+                            grade: this.gradeCode,
+                            subject: this.subjectCode,
+                            time: new Date(),
+                            equipment: this.equipmentName
+                        })
+                    } else {
+                        IFlyCollector.onEvent('3008',null,'30081002',null,{
+                            hwid: this.getQueryObject().hwId,
+                            time: new Date(),
+                            equipment: this.equipmentName
+                        })
+                    }
+                }
             }
         },
         //进行数据埋点
         buryingPoint: function () {
-            // this.getEquipmentName(this.getQueryObject().type)//获取设备名称
-            // if (typeof IFlyCollector !== 'undefined') {
-            //     if (this.isRequestSuccess) {
-            //         IFlyCollector.onEvent('3008',null,'30081001',null,{
-            //             hwid: this.getQueryObject().hwId,
-            //             phase: this.phaseCode,
-            //             grade: this.gradeCode,
-            //             subject: this.subjectCode,
-            //             time: new Date(),
-            //             equipment: this.equipmentName,
-            //             type: this.getQueryObject().type
-            //         })
-            //     } else {
-            //         IFlyCollector.onEvent('3008',null,'30081001',null,{
-            //             hwid: this.getQueryObject().hwId,
-            //             error: this.errMsg,
-            //             time: new Date(),
-            //             equipment: this.equipmentName,
-            //             type: this.getQueryObject().type
-            //         })
-            //     }
-            // }
+            this.getEquipmentName(this.getQueryObject().type)//获取设备名称
+            if (typeof IFlyCollector !== 'undefined') {
+                if (this.isRequestSuccess) {
+                    IFlyCollector.onEvent('3008',null,'30081001',null,{
+                        hwid: this.getQueryObject().hwId,
+                        phase: this.phaseCode,
+                        grade: this.gradeCode,
+                        subject: this.subjectCode,
+                        time: new Date(),
+                        equipment: this.equipmentName,
+                        type: this.getQueryObject().type
+                    })
+                } else {
+                    IFlyCollector.onEvent('3008',null,'30081001',null,{
+                        hwid: this.getQueryObject().hwId,
+                        time: new Date(),
+                        equipment: this.equipmentName,
+                        type: this.getQueryObject().type
+                    })
+                }
+            }
         },
         //判断设备名称
         getEquipmentName: function (type) {
