@@ -121,7 +121,7 @@
                 <span class="step_span_tip">第二步：使用学生智学网账号密码登录；</span>
             </div>
             <div class="step_div_tip">
-                <span class="step_span_tip">第三步：在首页电饭锅等点击“练习中心”查看练习。</span>
+                <span class="step_span_tip">第范德萨 v三步：在首页电点击“练习中心”查看练习。</span>
             </div>
         </div>
         <!--空白容器-->
@@ -181,11 +181,16 @@
 
         function openApp() {
             if (isiOS) {
-                alert('打开IOSApp');
+                alert('打开IOSAp阿斯顿发生p');
                 // window.location.href = "zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=";
-                $('#clickApp').attr('href','https://www.baidu.com');
+                // $('#clickApp').attr('href','https://www.baidu.com');
                 // alert("下载app");
                 // window.location.href = "https://itunes.apple.com/cn/app/智学网-让学习更简单/id981030648?mt=8";
+                // window.location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning";
+                    var ifr = document.createElement('iframe');
+                    ifr.src = 'zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=';
+                    ifr.style.display = 'none';
+                    document.body.appendChild(ifr);
             } else {
                 // alert('打开AndroidApp');
                 // window.location.href = "zhixue://app.zhixue.com?internalLink=eydwcm9kdWN0VGFnJzonenl6eCcsJ3Byb2R1Y3RQYXJhbXMnOnsnbW9kdWxlJzonenl6eCd9fQo=";
