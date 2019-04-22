@@ -150,10 +150,12 @@
         var userAgent = navigator.userAgent, appVersion = navigator.appVersion;
         var isiOS = !!userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
         var isWeiXin = (userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger');
+        var isFirstReload = true;
         alert("不是QQ弹框");
         if (!isWeiXin) {
             alert("不是QQ弹框");
             openApp();
+            isFirstReload = false;
         }
         //点击打开应用
         $('#clickApp').click(function () {
@@ -184,13 +186,18 @@
                 alert('打开IOSApp');
                 window.location.href = "zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=";
             } else {
-                alert('打开AndApp');
-                $('#clickApp').attr('href','zhixue://app.zhixue.com?internalLink=eydwcm9kdWN0VGFnJzonenl6eCcsJ3Byb2R1Y3RQYXJhbXMnOnsnbW9kdWxlJzonenl6eCd9fQo=');
-                // var ifr = document.createElement('iframe');
-                // ifr.src = "zhixue://app.zhixue.com?internalLink=eydwcm9kdWN0VGFnJzonenl6eCcsJ3Byb2R1Y3RQYXJhbXMnOnsnbW9kdWxlJzonenl6eCd9fQo=";
-                // ifr.style.display = 'none';
-                // document.body.appendChild(ifr);
-                // document.body.removeChild(ifr);
+                if (isFirstReload) {
+                    //第一次打开应用
+                    alert("第一次打开应用");
+                    var ifr = document.createElement('iframe');
+                    ifr.src = "zhixue://app.zhixue.com?internalLink=eydwcm9kdWN0VGFnJzonenl6eCcsJ3Byb2R1Y3RQYXJhbXMnOnsnbW9kdWxlJzonenl6eCd9fQo=";
+                    ifr.style.display = 'none';
+                    document.body.appendChild(ifr);
+                    document.body.removeChild(ifr);
+                } else {
+                    alert('再次打开应用');
+                    $('#clickApp').attr('href', 'zhixue://app.zhixue.com?internalLink=eydwcm9kdWN0VGFnJzonenl6eCcsJ3Byb2R1Y3RQYXJhbXMnOnsnbW9kdWxlJzonenl6eCd9fQo=');
+                }
             }
         }
 
