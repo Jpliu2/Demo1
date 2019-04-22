@@ -148,7 +148,6 @@
 <script type="text/javascript">
     $(function () {
         var userAgent = navigator.userAgent, appVersion = navigator.appVersion;
-        var isAndroid = userAgent.indexOf('Android') > -1 || userAgent.indexOf('Linux') > -1; //android终端或者uc浏览器
         var isiOS = !!userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
         var isWeiXin = (userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger');
         if (!isWeiXin) {
@@ -180,9 +179,10 @@
 
         function openApp() {
             if (isiOS) {
-                alert('打开app');
+                alert('打开IOSApp');
                 window.location.href = "zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=";
             } else {
+                alert('打开AndroidApp');
                 var ifr = document.createElement('iframe');
                 ifr.src = "zhixue://app.zhixue.com?internalLink=eydwcm9kdWN0VGFnJzonenl6eCcsJ3Byb2R1Y3RQYXJhbXMnOnsnbW9kdWxlJzonenl6eCd9fQo=";
                 ifr.style.display = 'none';
