@@ -118,7 +118,7 @@
                 <span class="step_span_tip">第二步：使用学生智学网账号密码登录；</span>
             </div>
             <div class="step_div_tip">
-                <span class="step_span_tip">第三步：在首页dsfgdsi;gh点击“练习中心”查看练习。</span>
+                <span class="step_span_tip">第三步：在首页点击“练习中心”查看练习。</span>
             </div>
         </div>
         <!--空白容器-->
@@ -148,7 +148,7 @@
         var isiOS = !!userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
         var isiPad = !!userAgent.match(/iPad/i);//ipad终端
         var isWeiXin = (userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger');
-        var isIOSQQ = (isiOS && / QQ/i.test(navigator.userAgent));
+        var isIOSQQ = (isiOS && / QQ/i.test(userAgent));
         if (!isWeiXin) {
             openApp();
         }
@@ -177,8 +177,6 @@
         });
 
         function openApp() {
-            alert(isIOSQQ);
-            alert(userAgent);
             if (isiOS) {
                 if (isiPad) {
                     //QQ中能打开
