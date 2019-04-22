@@ -116,20 +116,25 @@ var app = new Vue({
             }
         },
         //点击下载app按钮
-        downloadApp: function() {
-            this.openOrDownloadApp()
+        downApp: function() {
+            this.openOrDownloadApp(30081002)
         },
         //点击打开app按钮
         openApp: function() {
-            this.openOrDownloadApp()
+            this.openOrDownloadApp(30081003)
         },
         //进行下载或者打开app的埋点操作
-        openOrDownloadApp: function() {
-            if(navigator.userAgent.toLowerCase().match(/MicroMessenger/i) != 'micromessenger'){
+        openOrDownloadApp: function(eventId) {
+            var userAgent = navigator.userAgent
+            var isiOS = !!userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)  //ios终端
+            var isiPad = !!userAgent.match(/iPad/i)                         //ipad终端
+            var isWeiXin = (userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger');
+            var isIOSQQ = (isiOS && / QQ/i.test(userAgent))
+            if(isWeiXin||((!isiPad)&&isIOSQQ)){
                 this.getEquipmentName(this.getQueryObject().type)//获取设备名称
                 if (typeof IFlyCollector !== 'undefined') {
                     if (this.isRequestSuccess) {
-                        IFlyCollector.onEvent('3008',null,'30081002',null,{
+                        IFlyCollector.onEvent('3008',null,eventId,null,{
                             hwid: this.getQueryObject().hwId,
                             phase: this.phaseCode,
                             grade: this.gradeCode,
@@ -138,7 +143,7 @@ var app = new Vue({
                             equipment: this.equipmentName
                         })
                     } else {
-                        IFlyCollector.onEvent('3008',null,'30081002',null,{
+                        IFlyCollector.onEvent('3008',null,eventId,null,{
                             hwid: this.getQueryObject().hwId,
                             time: new Date(),
                             equipment: this.equipmentName

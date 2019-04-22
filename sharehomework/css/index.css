@@ -237,14 +237,28 @@ div,img,span,label {
     font-family: PingFangSC-Regular, sans-serif;
 }
 
+#share_downLoadIcon {
+    position: absolute;
+    padding-left: 15px;
+    width: 44px;
+    height: 44px;
+    top: 5px;
+}
+
 #bottom_span {
     background-color: white;
     position: absolute;
-    padding-left: 15px;
+    padding-left: 70px;
     height: 14px;
     top: 20px;
     line-height: 14px;
     color: #262729;
+}
+
+#downLoadApp {
+    background-color: transparent;
+    color: #05C1AE;
+    cursor: pointer;
 }
 
 #bottom_btn {
