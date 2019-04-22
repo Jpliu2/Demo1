@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="160bc6e7-4a3b-412d-9ee7-8f78968deac6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/sharehomework/image/share_download_IconImage@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sharehomework/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/sharehomework/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sharehomework/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/sharehomework/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sharehomework/sharehomeworkinfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/sharehomework/sharehomeworkinfo.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,14 +15,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sharehomework/sharehomeworkinfo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="206" column="101" lean-forward="true" selection-start-line="206" selection-start-column="101" selection-end-line="206" selection-end-column="101" />
+            <state relative-caret-position="234">
+              <caret line="188" column="82" lean-forward="true" selection-start-line="188" selection-start-column="82" selection-end-line="188" selection-end-column="82" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sharehomework/css/index.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="632">
+              <caret line="276" lean-forward="true" selection-start-line="276" selection-end-line="276" />
             </state>
           </provider>
         </entry>
@@ -74,9 +79,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/sharehomework/js/js.js" />
-        <option value="$PROJECT_DIR$/sharehomework/css/index.css" />
         <option value="$PROJECT_DIR$/sharehomework/js/index.js" />
         <option value="$PROJECT_DIR$/sharehomework/sharehomeworkinfo.html" />
+        <option value="$PROJECT_DIR$/sharehomework/css/index.css" />
       </list>
     </option>
   </component>
@@ -161,12 +166,12 @@
       <workItem from="1555491040267" duration="485000" />
       <workItem from="1555548281548" duration="10432000" />
       <workItem from="1555633996827" duration="8808000" />
-      <workItem from="1555893003496" duration="12246000" />
+      <workItem from="1555893003496" duration="12470000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31971000" />
+    <option name="totallyTimeSpent" value="32195000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="29" y="23" width="1411" height="877" extended-state="6" />
@@ -228,13 +233,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sharehomework/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="247" column="14" lean-forward="true" selection-start-line="247" selection-start-column="14" selection-end-line="247" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sharehomework/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
@@ -244,11 +242,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sharehomework/sharehomeworkinfo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="206" column="101" lean-forward="true" selection-start-line="206" selection-start-column="101" selection-end-line="206" selection-end-column="101" />
+        <state relative-caret-position="234">
+          <caret line="188" column="82" lean-forward="true" selection-start-line="188" selection-start-column="82" selection-end-line="188" selection-end-column="82" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sharehomework/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="632">
+          <caret line="276" lean-forward="true" selection-start-line="276" selection-end-line="276" />
         </state>
       </provider>
     </entry>

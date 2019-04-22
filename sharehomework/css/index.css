@@ -233,13 +233,13 @@ div,img,span,label {
     bottom: 0;
     height: 54px;
     width: 100%;
-    font-size: 15px;
+    font-size: 12px;
     font-family: PingFangSC-Regular, sans-serif;
 }
 
 #share_downLoadIcon {
     position: absolute;
-    padding-left: 15px;
+    padding-left: 8px;
     width: 44px;
     height: 44px;
     top: 5px;
@@ -248,7 +248,7 @@ div,img,span,label {
 #bottom_span {
     background-color: white;
     position: absolute;
-    padding-left: 70px;
+    padding-left: 52px;
     height: 14px;
     top: 20px;
     line-height: 14px;
@@ -269,10 +269,10 @@ div,img,span,label {
     outline:none;
     color: white;
     position: absolute;
-    right: 15px;
-    top: 8px;
-    width: 100px;
-    height: 38px;
+    right: 8px;
+    top: 10px;
+    width: 85px;
+    height: 34px;
 }
 
 /*蒙层*/
