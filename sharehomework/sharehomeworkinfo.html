@@ -152,10 +152,8 @@
         var isiPad = !!userAgent.match(/iPad/i);//ipad终端
         var isWeiXin = (userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger');
         var isQQ = userAgent.match(QQ);
-        var isFirstReload = true;
         if (!isWeiXin) {
             openApp();
-            isFirstReload = false;
         }
         //点击打开应用
         $('#clickApp').click(function () {
@@ -183,8 +181,8 @@
 
         function openApp() {
             alert(isQQ);
+            alert(userAgent);
             if (isiOS) {
-                // alert(userAgent);
                 if (isiPad) {
                     //QQ中能打开
                     window.location.href = "zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=";
@@ -200,22 +198,10 @@
                     }
                 }
             } else {
-                alert('打开Android123App');
                 var ifr = document.createElement('iframe');
                 ifr.src = 'zhixue://app.zhixue.com?internalLink=eydwcm9kdWN0VGFnJzonenl6eCcsJ3Byb2R1Y3RQYXJhbXMnOnsnbW9kdWxlJzonenl6eCd9fQo=';
                 ifr.style.display = 'none';
                 document.body.appendChild(ifr);
-                // window.location.href = "zhixue://app.zhixue.com?internalLink=eydwcm9kdWN0VGFnJzonenl6eCcsJ3Byb2R1Y3RQYXJhbXMnOnsnbW9kdWxlJzonenl6eCd9fQo=";
-            //     alert("下载android");
-            //     window.location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning";
-            //     var ifr = document.createElement('iframe');
-            //     ifr.src = 'zhixue://app.zhixue.com?internalLink=eydwcm9kdWN0VGFnJzonenl6eCcsJ3Byb2R1Y3RQYXJhbXMnOnsnbW9kdWxlJzonenl6eCd9fQo=';
-            //     ifr.style.display = 'none';
-            //     document.body.appendChild(ifr);
-            //     window.setTimeout(function(){
-            //         document.body.removeChild(ifr);
-            //     },2000)
-            //     $('#downloadApp').attr('href','http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning');
             }
         }
 
@@ -223,7 +209,7 @@
             if (isiOS) {
                 window.location.href = "https://itunes.apple.com/cn/app/智学网-让学习更简单/id981030648?mt=8";
             } else {
-                $('#downloadApp').attr('href','http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning');
+                window.location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning";
             }
         }
     });
