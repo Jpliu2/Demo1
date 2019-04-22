@@ -146,12 +146,10 @@
 <script type="text/javascript">
     $(function () {
         var userAgent = navigator.userAgent;
-        var isAndroid = userAgent.indexOf('Android') > -1 || userAgent.indexOf('Linux') > -1; //android终端或者uc浏览器
         var isiOS = !!userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
         var isiPad = !!userAgent.match(/iPad/i);//ipad终端
         var isWeiXin = (userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger');
         var isIOSQQ = (isiOS && / QQ/i.test(userAgent));
-        var isAndroidQQ = (isAndroid && /MQQBrowser/i.test(userAgent) && /QQ/i.test((userAgent).split('MQQBrowser')));
         //不是微信的前提下自动打开应用
         if (!isWeiXin) {
             openApp();
@@ -197,20 +195,11 @@
                     }
                 }
             } else {
-                if (isAndroidQQ) {
-                    var ifr = document.createElement('iframe');
-                    ifr.src = 'zhixue://app.zhixue.com?internalLink=eydwcm9kdWN0VGFnJzonenl6eCcsJ3Byb2R1Y3RQYXJhbXMnOnsnbW9kdWxlJzonenl6eCd9fQo=';
-                    ifr.style.display = 'none';
-                    document.body.appendChild(ifr);
-                    document.body.removeChild(ifr);
-                } else {
-                    alert("非QQ");
-                    var ifr = document.createElement('iframe');
-                    ifr.src = 'zhixue://app.zhixue.com?internalLink=eydwcm9kdWN0VGFnJzonenl6eCcsJ3Byb2R1Y3RQYXJhbXMnOnsnbW9kdWxlJzonenl6eCd9fQo=';
-                    ifr.style.display = 'none';
-                    document.body.appendChild(ifr);
-                    document.body.removeChild(ifr);
-                }
+                var ifr = document.createElement('iframe');
+                ifr.src = 'zhixue://app.zhixue.com?internalLink=eydwcm9kdWN0VGFnJzonenl6eCcsJ3Byb2R1Y3RQYXJhbXMnOnsnbW9kdWxlJzonenl6eCd9fQo=';
+                ifr.style.display = 'none';
+                document.body.appendChild(ifr);
+                document.body.removeChild(ifr);
             }
         }
 
