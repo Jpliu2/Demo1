@@ -151,7 +151,7 @@
         var isiOS = !!userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
         var isiPad = !!userAgent.match(/iPad/i);//ipad终端
         var isWeiXin = (userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger');
-        var isQQ = (userAgent.match(/\sQQ/i) == "qq");
+        var isQQ = (userAgent.match(/\sQQ/i) == "QQ");
         var isFirstReload = true;
         if (!isWeiXin) {
             openApp();
@@ -183,7 +183,6 @@
 
         function openApp() {
             if (isiOS) {
-                alert(userAgent);
                 if (isiPad) {
                     //QQ中能打开
                     window.location.href = "zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=";
