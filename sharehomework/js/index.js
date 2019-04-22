@@ -116,12 +116,10 @@ var app = new Vue({
         },
         //点击下载app按钮
         downApp: function() {
-            alert("下载app埋点")
             this.openOrDownloadApp(30081002)
         },
         //点击打开app按钮
         openApp: function() {
-            alert("打开app埋点")
             this.openOrDownloadApp(30081003)
         },
         //进行下载或者打开app的埋点操作
@@ -132,6 +130,7 @@ var app = new Vue({
             var isWeiXin = (userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger');
             var isIOSQQ = (isiOS && / QQ/i.test(userAgent))
             if(isWeiXin||((!isiPad)&&isIOSQQ)){
+                alert("埋点")
                 this.getEquipmentName(this.getQueryObject().type)//获取设备名称
                 if (typeof IFlyCollector !== 'undefined') {
                     if (this.isRequestSuccess) {
