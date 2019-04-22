@@ -70,7 +70,6 @@ var app = new Vue({
         })
     },
     methods: {
-        // 从url上截取参数对象
         //从url上截取参数对象
         getQueryObject: function(url) {
             url = url == null ? window.location.href : url
@@ -117,10 +116,12 @@ var app = new Vue({
         },
         //点击下载app按钮
         downApp: function() {
+            alert("下载app埋点")
             this.openOrDownloadApp(30081002)
         },
         //点击打开app按钮
         openApp: function() {
+            alert("打开app埋点")
             this.openOrDownloadApp(30081003)
         },
         //进行下载或者打开app的埋点操作

@@ -25,32 +25,32 @@
         }
     </style>
     <link type="text/css" rel="styleSheet" href="./css/index.css" />
-    <!--<script type="text/javascript">-->
-    <!--//埋点SDK集成-->
-    <!--(function (w, d, s) {-->
-        <!--var l = 'IFlyCollector', f = d.getElementsByTagName(s)[0], j = d.crea-->
-        <!--teElement(s), w = window;-->
-        <!--w[l] = {}; var c = w[l]; c._o = function (a) { return function () {-->
-        <!--(c._e = c._e || []).push([a, arguments]) } };-->
-        <!--var e = ['init', 'onEvent', 'onError', 'bindUser', 'updateCustomConfi-->
-        <!--g'];-->
-        <!--for (var i = 0; i < e.length; i++) { c[e[i]] = c._o.call(null, e[i])-->
-        <!--}-->
-        <!--j.async = true; j.src = 'http://logconf.iflytek.com/entry.js'; f.pare-->
-        <!--ntNode.insertBefore(j, f);-->
-    <!--})(window, document, 'script');-->
-        <!--//埋点接口初始化-->
-        <!--IFlyCollector.init({-->
-            <!--appId: "zx_web_sdk",-->
-            <!--host: ".",-->
-            <!--debug: true,-->
-            <!--spa: false,-->
-            <!--configUrl: "http://logconf.iflytek.com",-->
-            <!--collectUrl: "https://ebglog.iflytek.com",-->
-            <!--gpsGetSwitch: false,-->
-            <!--source:"ebg"-->
-        <!--})-->
-    <!--</script>-->
+    <script type="text/javascript">
+    //埋点SDK集成
+    (function (w, d, s) {
+        var l = 'IFlyCollector', f = d.getElementsByTagName(s)[0], j = d.crea
+        teElement(s), w = window;
+        w[l] = {}; var c = w[l]; c._o = function (a) { return function () {
+        (c._e = c._e || []).push([a, arguments]) } };
+        var e = ['init', 'onEvent', 'onError', 'bindUser', 'updateCustomConfi
+        g'];
+        for (var i = 0; i < e.length; i++) { c[e[i]] = c._o.call(null, e[i])
+        }
+        j.async = true; j.src = 'http://logconf.iflytek.com/entry.js'; f.pare
+        ntNode.insertBefore(j, f);
+    })(window, document, 'script');
+        //埋点接口初始化
+        IFlyCollector.init({
+            appId: "zx_web_sdk",
+            host: ".",
+            debug: true,
+            spa: false,
+            configUrl: "http://logconf.iflytek.com",
+            collectUrl: "https://ebglog.iflytek.com",
+            gpsGetSwitch: false,
+            source:"ebg"
+        })
+    </script>
 </head>
 <body>
 <!--网页中紧接着<body>加一个-->
