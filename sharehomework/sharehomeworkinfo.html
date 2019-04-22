@@ -149,6 +149,7 @@
     $(function () {
         var userAgent = navigator.userAgent, appVersion = navigator.appVersion;
         var isiOS = !!userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+        var isiPad = !!userAgent.match(/iPad/i);//ipad终端
         var isWeiXin = (userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger');
         var isFirstReload = true;
         if (!isWeiXin) {
@@ -181,9 +182,16 @@
 
         function openApp() {
             if (isiOS) {
-                alert('打开IOS-QQ-App');
+                if (isiPad) {
+                    alert('打开iPad-QQ-App');
+                    window.location.href = "zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=";
+                } else {
+                    window.location.href = "zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=";
+                    alert('打开iPhone-QQ-App');
+                }
+
                 // window.location.href = "zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=";
-                $('#clickApp').attr('href','zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=');
+                // $('#clickApp').attr('href','zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=');
                 // alert("下载app");
                 // window.location.href = "https://itunes.apple.com/cn/app/智学网-让学习更简单/id981030648?mt=8";
                 // window.location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning";
