@@ -148,7 +148,7 @@
         var isiOS = !!userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
         var isiPad = !!userAgent.match(/iPad/i);//ipad终端
         var isWeiXin = (userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger');
-        var isQQ = userAgent.match(/QQ/);
+        var isIOSQQ = (isiOS && / QQ/i.test(navigator.userAgent));
         if (!isWeiXin) {
             openApp();
         }
@@ -177,7 +177,7 @@
         });
 
         function openApp() {
-            alert(isQQ);
+            alert(isIOSQQ);
             alert(userAgent);
             if (isiOS) {
                 if (isiPad) {
