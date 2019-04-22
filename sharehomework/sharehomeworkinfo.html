@@ -65,9 +65,6 @@
     <img id="share_rightIcon" src="./image/share_rightIcon@2x.png" alt=""/>
     <!--作业内容-->
     <div id="backview">
-        <div id="share_downloadApp">
-
-        </div>
         <div id="share_hworkInfo" v-if="isRequestSuccess">
             <div id="hworkInfo_hwTitle_div">
                 <span id="hworkInfo_hwTitle">{{ hwTitle }}</span>
@@ -151,7 +148,7 @@
         var isiOS = !!userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
         var isiPad = !!userAgent.match(/iPad/i);//ipad终端
         var isWeiXin = (userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger');
-        var isQQ = userAgent.match(QQ);
+        var isQQ = userAgent.match(/QQ/);
         if (!isWeiXin) {
             openApp();
         }

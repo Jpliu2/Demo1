@@ -56,18 +56,6 @@ div,img,span,label {
     bottom: 0;
 }
 
-/*下载app的北京*/
-#share_downloadApp {
-    background-color: white;
-    position: fixed;
-    -webkit-transform: translateZ(0);
-    top: 0;
-    height: 54px;
-    width: 100%;
-    font-size: 15px;
-    font-family: PingFangSC-Regular, sans-serif;
-}
-
 #share_hworkInfo {
     border-radius: 5px;
     background-color: white;
