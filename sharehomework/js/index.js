@@ -153,8 +153,8 @@ var app = new Vue({
         },
         //进行数据埋点
         buryingPoint: function () {
-            this.getEquipmentName(this.getQueryObject().type)//获取设备名称
             this.openOrDownloadApp(30081002)
+            this.getEquipmentName(this.getQueryObject().type)//获取设备名称
             if (typeof IFlyCollector !== 'undefined') {
                 if (this.isRequestSuccess) {
                     IFlyCollector.onEvent('3008',null,'30081001',null,{
