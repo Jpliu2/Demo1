@@ -151,7 +151,7 @@
         var isiOS = !!userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
         var isiPad = !!userAgent.match(/iPad/i);//ipad终端
         var isWeiXin = (userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger');
-        var isQQ = (userAgent.match(/QQ/i) == "qq");
+        var isQQ = userAgent.match(QQ);
         var isFirstReload = true;
         if (!isWeiXin) {
             openApp();
