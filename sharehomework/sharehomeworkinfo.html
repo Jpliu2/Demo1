@@ -150,8 +150,9 @@
         var userAgent = navigator.userAgent, appVersion = navigator.appVersion;
         var isiOS = !!userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
         var isWeiXin = (userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger');
-
+        alert("不是QQ弹框");
         if (!isWeiXin) {
+            alert("不是QQ弹框");
             openApp();
         }
         //点击打开应用
