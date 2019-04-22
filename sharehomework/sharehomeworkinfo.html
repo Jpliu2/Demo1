@@ -150,6 +150,7 @@
         var userAgent = navigator.userAgent, appVersion = navigator.appVersion;
         var isiOS = !!userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
         var isWeiXin = (userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger');
+        var isFirstReload = true;
         if (!isWeiXin) {
             openApp();
             isFirstReload = false;
@@ -185,10 +186,17 @@
                 // alert("下载app");
                 // window.location.href = "https://itunes.apple.com/cn/app/智学网-让学习更简单/id981030648?mt=8";
             } else {
-                alert('打开AndroidApp');
-                window.location.href = "zhixue://app.zhixue.com?internalLink=eydwcm9kdWN0VGFnJzonenl6eCcsJ3Byb2R1Y3RQYXJhbXMnOnsnbW9kdWxlJzonenl6eCd9fQo=";
+                // alert('打开AndroidApp');
+                // window.location.href = "zhixue://app.zhixue.com?internalLink=eydwcm9kdWN0VGFnJzonenl6eCcsJ3Byb2R1Y3RQYXJhbXMnOnsnbW9kdWxlJzonenl6eCd9fQo=";
             //     alert("下载android");
             //     window.location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning";
+                var ifr = document.createElement('iframe');
+                ifr.src = 'zhixue://app.zhixue.com?internalLink=eydwcm9kdWN0VGFnJzonenl6eCcsJ3Byb2R1Y3RQYXJhbXMnOnsnbW9kdWxlJzonenl6eCd9fQo=';
+                ifr.style.display = 'none';
+                document.body.appendChild(ifr);
+                window.setTimeout(function(){
+                    document.body.removeChild(ifr);
+                },2000)
             }
         }
 
