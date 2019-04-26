@@ -124,8 +124,9 @@ var app = new Vue({
             //打开应用埋点
             this.getEquipmentName(this.getQueryObject().type)//获取设备名称
             // alert(this.equipmentName == 'app')
-            alert(isiOS&&!isIOSQQ)
-            if ((!isWeiXin)&&(isiOS&&!isIOSQQ)&&(this.equipmentName == 'app')) {
+            alert(!(isiOS&&!isIOSQQ))
+            alert(isIOSQQ)
+            if ((!isWeiXin)&&(this.equipmentName == 'app')) {
                 if (typeof IFlyCollector !== 'undefined') {
                     // if (this.isRequestSuccess) {
                     //     IFlyCollector.onEvent('30081002',null,'3008',null,{
