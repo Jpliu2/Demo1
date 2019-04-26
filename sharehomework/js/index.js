@@ -143,7 +143,7 @@ var app = new Vue({
                     //         equipment: this.equipmentName
                     //     })
                     // }
-                    alert("打开app埋点")
+                    alert("打开app125埋点")
                 }
             }
         },
