@@ -123,28 +123,24 @@ var app = new Vue({
             var isIOSQQ = (isiOS && / QQ/i.test(userAgent))
             //打开应用埋点
             this.getEquipmentName(this.getQueryObject().type)//获取设备名称
-            alert(this.equipmentName == 'app')
-            alert(!(isiOS&&!isIOSQQ))
-            alert(isIOSQQ)
-            if ((!isWeiXin)&&(this.equipmentName == 'app')) {
+            if ((!isWeiXin)&&(!(isiOS&&isIOSQQ))&&(this.equipmentName == 'app')) {
                 if (typeof IFlyCollector !== 'undefined') {
-                    // if (this.isRequestSuccess) {
-                    //     IFlyCollector.onEvent('30081002',null,'3008',null,{
-                    //         hwid: this.getQueryObject().hwId,
-                    //         phase: this.phaseCode,
-                    //         grade: this.gradeCode,
-                    //         subject: this.subjectCode,
-                    //         time: new Date().getTime(),
-                    //         equipment: this.equipmentName
-                    //     })
-                    // } else {
-                    //     IFlyCollector.onEvent('30081002',null,'3008',null,{
-                    //         hwid: this.getQueryObject().hwId,
-                    //         time: new Date().getTime(),
-                    //         equipment: this.equipmentName
-                    //     })
-                    // }
-                    alert("打开app125埋点")
+                    if (this.isRequestSuccess) {
+                        IFlyCollector.onEvent('30081002',null,'3008',null,{
+                            hwid: this.getQueryObject().hwId,
+                            phase: this.phaseCode,
+                            grade: this.gradeCode,
+                            subject: this.subjectCode,
+                            time: new Date().getTime(),
+                            equipment: this.equipmentName
+                        })
+                    } else {
+                        IFlyCollector.onEvent('30081002',null,'3008',null,{
+                            hwid: this.getQueryObject().hwId,
+                            time: new Date().getTime(),
+                            equipment: this.equipmentName
+                        })
+                    }
                 }
             }
         },
@@ -153,23 +149,22 @@ var app = new Vue({
             if (!(navigator.userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger')) {
                 this.getEquipmentName(this.getQueryObject().type)//获取设备名称
                 if (typeof IFlyCollector !== 'undefined') {
-                    // if (this.isRequestSuccess) {
-                    //     IFlyCollector.onEvent('30081003',null,'3008',null,{
-                    //         hwid: this.getQueryObject().hwId,
-                    //         phase: this.phaseCode,
-                    //         grade: this.gradeCode,
-                    //         subject: this.subjectCode,
-                    //         time: new Date().getTime(),
-                    //         equipment: this.equipmentName
-                    //     })
-                    // } else {
-                    //     IFlyCollector.onEvent('30081003',null,'3008',null,{
-                    //         hwid: this.getQueryObject().hwId,
-                    //         time: new Date().getTime(),
-                    //         equipment: this.equipmentName
-                    //     })
-                    // }
-                    alert("下载app123埋点")
+                    if (this.isRequestSuccess) {
+                        IFlyCollector.onEvent('30081003',null,'3008',null,{
+                            hwid: this.getQueryObject().hwId,
+                            phase: this.phaseCode,
+                            grade: this.gradeCode,
+                            subject: this.subjectCode,
+                            time: new Date().getTime(),
+                            equipment: this.equipmentName
+                        })
+                    } else {
+                        IFlyCollector.onEvent('30081003',null,'3008',null,{
+                            hwid: this.getQueryObject().hwId,
+                            time: new Date().getTime(),
+                            equipment: this.equipmentName
+                        })
+                    }
                 }
             }
         },
@@ -178,25 +173,24 @@ var app = new Vue({
             this.getEquipmentName(this.getQueryObject().type)//获取设备名称
             this.openApp()
             if (typeof IFlyCollector !== 'undefined') {
-                // if (this.isRequestSuccess) {
-                //     IFlyCollector.onEvent('30081001',null,'3008',null,{
-                //         hwid: this.getQueryObject().hwId,
-                //         phase: this.phaseCode,
-                //         grade: this.gradeCode,
-                //         subject: this.subjectCode,
-                //         time: new Date().getTime(),
-                //         equipment: this.equipmentName,
-                //         type: this.getQueryObject().type
-                //     })
-                // } else {
-                //     IFlyCollector.onEvent('30081001',null,'3008',null,{
-                //         hwid: this.getQueryObject().hwId,
-                //         time: new Date().getTime(),
-                //         equipment: this.equipmentName,
-                //         type: this.getQueryObject().type
-                //     })
-                // }
-                alert("预览页面埋点")
+                if (this.isRequestSuccess) {
+                    IFlyCollector.onEvent('30081001',null,'3008',null,{
+                        hwid: this.getQueryObject().hwId,
+                        phase: this.phaseCode,
+                        grade: this.gradeCode,
+                        subject: this.subjectCode,
+                        time: new Date().getTime(),
+                        equipment: this.equipmentName,
+                        type: this.getQueryObject().type
+                    })
+                } else {
+                    IFlyCollector.onEvent('30081001',null,'3008',null,{
+                        hwid: this.getQueryObject().hwId,
+                        time: new Date().getTime(),
+                        equipment: this.equipmentName,
+                        type: this.getQueryObject().type
+                    })
+                }
             }
         },
         //判断设备名称
