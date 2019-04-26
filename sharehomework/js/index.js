@@ -122,7 +122,7 @@ var app = new Vue({
             var isWeiXin = (userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger')
             var isIOSQQ = (isiOS && / QQ/i.test(userAgent))
             //打开应用埋点
-            if (((!isWeiXin)||(isiOS&&!isIOSQQ))||(this.equipmentName == 'app')) {
+            if (((!isWeiXin)&&(isiOS&&!isIOSQQ))&&(this.equipmentName == 'app')) {
                 this.getEquipmentName(this.getQueryObject().type)//获取设备名称
                 if (typeof IFlyCollector !== 'undefined') {
                     // if (this.isRequestSuccess) {
@@ -175,24 +175,25 @@ var app = new Vue({
             this.getEquipmentName(this.getQueryObject().type)//获取设备名称
             this.openApp()
             if (typeof IFlyCollector !== 'undefined') {
-                if (this.isRequestSuccess) {
-                    IFlyCollector.onEvent('30081001',null,'3008',null,{
-                        hwid: this.getQueryObject().hwId,
-                        phase: this.phaseCode,
-                        grade: this.gradeCode,
-                        subject: this.subjectCode,
-                        time: new Date().getTime(),
-                        equipment: this.equipmentName,
-                        type: this.getQueryObject().type
-                    })
-                } else {
-                    IFlyCollector.onEvent('30081001',null,'3008',null,{
-                        hwid: this.getQueryObject().hwId,
-                        time: new Date().getTime(),
-                        equipment: this.equipmentName,
-                        type: this.getQueryObject().type
-                    })
-                }
+                // if (this.isRequestSuccess) {
+                //     IFlyCollector.onEvent('30081001',null,'3008',null,{
+                //         hwid: this.getQueryObject().hwId,
+                //         phase: this.phaseCode,
+                //         grade: this.gradeCode,
+                //         subject: this.subjectCode,
+                //         time: new Date().getTime(),
+                //         equipment: this.equipmentName,
+                //         type: this.getQueryObject().type
+                //     })
+                // } else {
+                //     IFlyCollector.onEvent('30081001',null,'3008',null,{
+                //         hwid: this.getQueryObject().hwId,
+                //         time: new Date().getTime(),
+                //         equipment: this.equipmentName,
+                //         type: this.getQueryObject().type
+                //     })
+                // }
+                alert("预览页面埋点")
             }
         },
         //判断设备名称
