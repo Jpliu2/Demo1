@@ -69,6 +69,7 @@ div,img,span,label {
 #hworkInfo_hwTitle {
     display:block;
     text-align:center;
+    font-weight: bold;
 }
 
 /*下划线*/
@@ -109,7 +110,7 @@ div,img,span,label {
     width: 56%;
     margin-bottom: 20px;
     text-align: right;
-    color: #57595D;
+    color: #262729;
     font-size: 14px;
     font-family: PingFangSC-Medium, sans-serif;
 }
@@ -267,6 +268,7 @@ div,img,span,label {
     border-radius: 5px;
     display: block;
     outline:none;
+    filter:chroma(color=#000000);
     color: white;
     position: absolute;
     right: 8px;
