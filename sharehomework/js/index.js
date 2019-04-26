@@ -24,12 +24,12 @@ var app = new Vue({
         $.ajax({
             type: 'POST',
             url:
-                // (this.isTestApi ? '//mhwtest.zhixue.com' : '//mehwapi.changyan.com') +
-                // (
-                //     '/homework_middle_customer_service/homeworkReportService/getShareHomeworkInfo'
-                // ),
+                (this.isTestApi ? '//mhwtest.zhixue.com' : '//mehwapi.changyan.com') +
+                (
+                    '/homework_middle_customer_service/homeworkReportService/getShareHomeworkInfo'
+                ),
             // 测试url
-            'http://172.31.223.17:30338/homework_middle_customer_service/homeworkReportService/getShareHomeworkInfo',
+            // 'http://172.31.223.17:30338/homework_middle_customer_service/homeworkReportService/getShareHomeworkInfo',
             data:
                 'hwId=' + this.getQueryObject().hwId,
             success: function(data) {
@@ -114,61 +114,81 @@ var app = new Vue({
                 this.isTestApi = true
             }
         },
-        //点击下载app按钮
-        downApp: function() {
-            this.openOrDownloadApp(30081003)
-        },
         //点击打开app按钮
         openApp: function() {
-            this.openOrDownloadApp(30081002)
-        },
-        //进行下载或者打开app的埋点操作
-        openOrDownloadApp: function(eventId) {
             var userAgent = navigator.userAgent
-            var isiOS = !!userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)  //ios终端
-            var isWeiXin = (userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger');
+            var isiOS = !!userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)  //iOS终端
+            var isAndroid = userAgent.indexOf('Android') > -1 || userAgent.indexOf('Linux') > -1    //Android终端
+            var isWeiXin = (userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger')
             var isIOSQQ = (isiOS && / QQ/i.test(userAgent))
-            if(!(isWeiXin||isIOSQQ)){
+            //打开应用埋点
+            if (((!isWeiXin)||(isiOS&&!isIOSQQ))&&(isiOS||isAndroid)) {
                 this.getEquipmentName(this.getQueryObject().type)//获取设备名称
                 if (typeof IFlyCollector !== 'undefined') {
-                    if (this.isRequestSuccess) {
-                        IFlyCollector.onEvent('3008',null,eventId,null,{
-                            hwid: this.getQueryObject().hwId,
-                            phase: this.phaseCode,
-                            grade: this.gradeCode,
-                            subject: this.subjectCode,
-                            time: new Date(),
-                            equipment: this.equipmentName
-                        })
-                    } else {
-                        IFlyCollector.onEvent('3008',null,eventId,null,{
-                            hwid: this.getQueryObject().hwId,
-                            time: new Date(),
-                            equipment: this.equipmentName
-                        })
-                    }
+                    // if (this.isRequestSuccess) {
+                    //     IFlyCollector.onEvent('30081002',null,'3008',null,{
+                    //         hwid: this.getQueryObject().hwId,
+                    //         phase: this.phaseCode,
+                    //         grade: this.gradeCode,
+                    //         subject: this.subjectCode,
+                    //         time: new Date().getTime(),
+                    //         equipment: this.equipmentName
+                    //     })
+                    // } else {
+                    //     IFlyCollector.onEvent('30081002',null,'3008',null,{
+                    //         hwid: this.getQueryObject().hwId,
+                    //         time: new Date().getTime(),
+                    //         equipment: this.equipmentName
+                    //     })
+                    // }
+                    alert("打开app埋点")
+                }
+            }
+        },
+        //点击下载app按钮
+        downApp: function() {
+            if (!(navigator.userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger')) {
+                this.getEquipmentName(this.getQueryObject().type)//获取设备名称
+                if (typeof IFlyCollector !== 'undefined') {
+                    // if (this.isRequestSuccess) {
+                    //     IFlyCollector.onEvent('30081003',null,'3008',null,{
+                    //         hwid: this.getQueryObject().hwId,
+                    //         phase: this.phaseCode,
+                    //         grade: this.gradeCode,
+                    //         subject: this.subjectCode,
+                    //         time: new Date().getTime(),
+                    //         equipment: this.equipmentName
+                    //     })
+                    // } else {
+                    //     IFlyCollector.onEvent('30081003',null,'3008',null,{
+                    //         hwid: this.getQueryObject().hwId,
+                    //         time: new Date().getTime(),
+                    //         equipment: this.equipmentName
+                    //     })
+                    // }
+                    alert("下载app埋点")
                 }
             }
         },
         //进行数据埋点
         buryingPoint: function () {
-            this.openOrDownloadApp(30081002)
             this.getEquipmentName(this.getQueryObject().type)//获取设备名称
+            this.openApp()
             if (typeof IFlyCollector !== 'undefined') {
                 if (this.isRequestSuccess) {
-                    IFlyCollector.onEvent('3008',null,'30081001',null,{
+                    IFlyCollector.onEvent('30081001',null,'3008',null,{
                         hwid: this.getQueryObject().hwId,
                         phase: this.phaseCode,
                         grade: this.gradeCode,
                         subject: this.subjectCode,
-                        time: new Date(),
+                        time: new Date().getTime(),
                         equipment: this.equipmentName,
                         type: this.getQueryObject().type
                     })
                 } else {
-                    IFlyCollector.onEvent('3008',null,'30081001',null,{
+                    IFlyCollector.onEvent('30081001',null,'3008',null,{
                         hwid: this.getQueryObject().hwId,
-                        time: new Date(),
+                        time: new Date().getTime(),
                         equipment: this.equipmentName,
                         type: this.getQueryObject().type
                     })
