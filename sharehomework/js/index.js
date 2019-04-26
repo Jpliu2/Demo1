@@ -168,7 +168,7 @@ var app = new Vue({
                     //         equipment: this.equipmentName
                     //     })
                     // }
-                    alert("下载app埋点")
+                    alert("下载app123埋点")
                 }
             }
         },
