@@ -121,7 +121,7 @@
         <!--空白容器-->
         <div id="share_tipBackview"></div>
         <div id="share_bottom">
-            <span id="bottom_span">尚未安装学生端APP，<a id="downLoadApp" v-on:click="downApp">立即下载</a></span>
+            <span id="bottom_span">尚未安装学生端端APP，<a id="downLoadApp" v-on:click="downApp">立即下载</a></span>
             <img id="share_downLoadIcon" src="./image/share_download_IconImage@2x.png">
             <a id="clickApp"><button id="bottom_btn" v-on:click="openApp">打开应用</button></a>
         </div>
@@ -180,7 +180,7 @@
             if (isiOS) {
                 if (isiPad) {
                     //QQ中能打开
-                    window.location.href = "zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=";
+                    window.location.href = "zxstudent://www.zxstudent.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=";
                 } else {
                     //QQ中不能打开
                     if (isIOSQQ) {
@@ -189,7 +189,7 @@
                         }, {passive: false});
                         $('#coverBackview').css('display','block');
                     } else {
-                        window.location.href = "zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=";
+                        window.location.href = "zxstudent://www.zxstudent.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=";
                     }
                 }
             }
