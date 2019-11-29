@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit" />
+    <meta name="full-screen" content="yes" />
+    <meta name="x5-fullscreen" content="true" />
+    <meta name="keywords" content="我是关键字" />
+    <meta itemprop="name" content="练习通知">
+    <meta itemprop="description" content="练习已发布成功,请前往智学APP作答">
+    <meta itemprop="image" content="./image/icon_image@2x.png">
+    <meta name="description" content="练习已发布成功,请前往智学APP作答" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="format-detection" content="telephone=no,email=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,minimal-ui"/>
+    <title>练习通知</title>
+    <link rel="icon" href="data:;base64,="/>
+    <script src="js/jquery.js"></script>
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+    <link type="text/css" rel="styleSheet" href="./css/index.css" />
+    <script type="text/javascript">
+        //埋点SDK集成
+        (function (w, d, s) {
+            var l = 'IFlyCollector', f = d.getElementsByTagName(s)[0], j = d.createElement(s), w = window;
+            w[l] = {}; var c = w[l]; c._o = function (a) { return function () {
+                (c._e = c._e || []).push([a, arguments]) } };
+            var e = ['init', 'onEvent', 'onError', 'bindUser', 'updateCustomConfig'];
+            for (var i = 0; i < e.length; i++) { c[e[i]] = c._o.call(null, e[i])
+            }
+            j.async = true; j.src = 'https://logconf.iflytek.com/entry.js';
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script');
+        //埋点接口初始化
+        IFlyCollector.init({
+            appId: "zx_web_sdk",
+            host: ".",
+            debug: true,
+            spa: false,
+            configUrl: "https://logconf.iflytek.com",
+            collectUrl: "https://ebglog.iflytek.com",
+            gpsGetSwitch: false,
+            source:"ebg"
+        })
+    </script>
+</head>
+<body>
+<!--网页中紧接着<body>加一个-->
+<div style='margin:0 auto;width:0px;height:0px;overflow:hidden;'>
+    <!--图片宽高大于400px，最好是一个正方形的图片-->
+    <img src="./image/icon_image@2x.png" width='700'>
+</div>
+<div class="wrap" id="app" v-cloak>
+    <img id="share_leftImage" src="./image/share_leftImg@2x.png" alt=""/>
+    <img id="share_rightImage" src="./image/share_rightImg@2x.png" alt=""/>
+    <img id="share_leftIcon" src="./image/share_leftIcon@2x.png" alt=""/>
+    <img id="share_rightIcon" src="./image/share_rightIcon@2x.png" alt=""/>
+    <!--作业内容-->
+    <div id="backview">
+        <div id="share_hworkInfo" v-if="isRequestSuccess">
+            <div id="hworkInfo_hwTitle_div">
+                <span id="hworkInfo_hwTitle">{{ hwTitle }}</span>
+            </div>
+            <div class="hworkInfo_hr_div"></div>
+            <div id="hworkInfo_detail" v-if="!isRepeal">
+                <!--作业信息-->
+                <!--避免名称太长换行-->
+                <div class="hworkInfo_topDetail">
+                    <span class="hworkInfo_topDetail_left">练习名称:</span>
+                    <span class="hworkInfo_topDetail_right" id="titleName">{{ hwTitle }}</span>
+                </div>
+                <div class="hworkInfo_topDetail">
+                    <span class="hworkInfo_topDetail_left">练习类型:</span>
+                    <span class="hworkInfo_topDetail_right">{{ hwTypeName }}</span>
+                </div>
+                <div class="hworkInfo_topDetail">
+                    <span class="hworkInfo_topDetail_left">练习开始时间:</span>
+                    <span class="hworkInfo_topDetail_right">{{ hwStartTime }}</span>
+                </div>
+                <div class="hworkInfo_topDetail">
+                    <span class="hworkInfo_topDetail_left">练习结束时间:</span>
+                    <span class="hworkInfo_topDetail_right">{{ hwEndTime }}</span>
+                </div>
+                <div id="hworkInfo_TipMsg_div">
+                    <span id="hworkInfo_TipMsg">练习开始后同学们可在智学网APP上作答，请同学们按时完成练习哦~</span>
+                </div>
+            </div>
+            <div id="hworkInfo_default" v-if="isRepeal">
+                <img id="share_default_image" src="./image/share_default_image@2x.png" alt=""/>
+                <br>
+                <label class="share_default_label">练习已经被老师撤销了～</label>
+            </div>
+        </div>
+        <!--缺省图片-->
+        <div id="share_networkError" v-if="!isRequestSuccess">
+            <img id="share_error_image" :src="tipImageSrc" alt=""/>
+            <br>
+            <label class="share_default_label">{{ tipText }}</label>
+        </div>
+        <div id="share_center_div">
+            <img id="share_center_leftImage" src="./image/share_center_iconImg@2x.png" alt=""/>
+            <img id="share_center_rightImage" src="./image/share_center_iconImg@2x.png" alt=""/>
+        </div>
+        <div id="share_step">
+            <span id="step_span_title">找不到练习？看这里</span>
+            <div class="step_div_tip">
+                <span class="step_span_tip">第一步：打开智学网APP；</span>
+            </div>
+            <div class="step_div_tip">
+                <span class="step_span_tip">第二步：使用学生智学网账号密码登录；</span>
+            </div>
+            <div class="step_div_tip">
+                <span class="step_span_tip">第三步：在首页点击“练习中心”查看练习。</span>
+            </div>
+        </div>
+        <!--空白容器-->
+        <div id="share_tipBackview"></div>
+        <div id="share_bottom">
+            <span id="bottom_span">尚未安装家长端APP，<a id="downLoadApp" v-on:click="downApp">立即下载</a></span>
+            <img id="share_downLoadIcon" src="./image/share_download_IconImage@2x.png">
+            <a id="clickApp"><button id="bottom_btn" v-on:click="openApp">打开应用</button></a>
+        </div>
+    </div>
+</div>
+<!--蒙层-->
+<div id="coverBackview" v-cloak>
+    <img id="cover_tipImage" src="./image/cover_tipImage@2x.png" alt=""/>
+    <span>
+        请点击右上角 【...】
+        <br>
+        安卓：选择【在浏览器中打开】
+        <br>
+        iPhone：选择【在safari浏览器中打开】
+    </span>
+</div>
+<script src="js/vue.js"></script>
+<script src="js/index.js"></script>
+<script type="text/javascript">
+    $(function () {
+        var userAgent = navigator.userAgent;
+        var isiOS = !!userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+        var isAndroid = userAgent.indexOf('Android') > -1 || userAgent.indexOf('Linux') > -1; //android终端或者uc浏览器
+        var isiPad = !!userAgent.match(/iPad/i);//ipad终端
+        var isWeiXin = (userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger');
+        var isIOSQQ = (isiOS && / QQ/i.test(userAgent));
+        //不是微信的前提下自动打开应用
+        if (!isWeiXin) {
+            openApp();
+        }
+        //点击打开应用
+        $('#clickApp').click(function () {
+            if (isWeiXin) {
+                document.body.addEventListener('touchmove', function (e) {
+                    e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
+                }, {passive: false});
+                $('#coverBackview').css('display','block');
+            } else {
+                openApp();
+            }
+        });
+        //下载应用
+        $("#downLoadApp").click(function () {
+            if (isWeiXin) {
+                document.body.addEventListener('touchmove', function (e) {
+                    e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
+                }, {passive: false});
+                $('#coverBackview').css('display','block');
+            } else {
+                downLoadApp();
+            }
+        });
+        //打开应用（判断ios是否为QQ）
+        function openApp() {
+            //为ios设备
+            if (isiOS) {
+                if (isiPad) {
+                    //QQ中能打开
+                    window.location.href = "zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=";
+                } else {
+                    //QQ中不能打开
+                    if (isIOSQQ) {
+                        document.body.addEventListener('touchmove', function (e) {
+                            e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
+                        }, {passive: false});
+                        $('#coverBackview').css('display','block');
+                    } else {
+                        window.location.href = "zhixue://www.zhixue.com?internalLink=JTdCJTIycHJvZHVjdFBhcmFtcyUyMiUzQSU3QiUyMm1vZHVsZSUyMiUzQSUyMmh3bGlzdF91bmZpbmlzaGVkJTIyJTdEJTJDJTIycHJvZHVjdFRhZyUyMiUzQSUyMnp5englMjIlN0Q=";
+                    }
+                }
+            }
+            //为android设备
+            if (isAndroid) {
+                var ifr = document.createElement('iframe');
+                ifr.src = 'zhixue://app.zhixue.com?internalLink=eydwcm9kdWN0VGFnJzonenl6eCcsJ3Byb2R1Y3RQYXJhbXMnOnsnbW9kdWxlJzonenl6eCd9fQo=';
+                ifr.style.display = 'none';
+                document.body.appendChild(ifr);
+                document.body.removeChild(ifr);
+            }
+        }
+        //下载app
+        function downLoadApp() {
+            //为ios设备
+            if (isiOS) {
+                window.location.href = "https://itunes.apple.com/cn/app/智学网学生端/id1448462214?mt=8";
+            } else {
+                window.location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=com.iflytek.elpmobile.smartlearning";
+            }
+        }
+    });
+</script>
+</body>
+</html>
